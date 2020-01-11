@@ -18,6 +18,8 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Avatar from '@material-ui/core/Avatar'
 
+import data from '../config'
+
 import SvgIcon from "@material-ui/core/SvgIcon";
 
 
