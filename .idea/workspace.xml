@@ -2,7 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce828d42-9e66-44cf-afab-b613124c2325" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SideDrawer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SideDrawer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/github.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/github.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/medium.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/medium.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/images/twitter.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/images/twitter.svg" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +86,7 @@
       <updated>1578732541281</updated>
       <workItem from="1578732544283" duration="34000" />
       <workItem from="1578732611382" duration="11071000" />
-      <workItem from="1578766708845" duration="402000" />
+      <workItem from="1578766708845" duration="1298000" />
     </task>
     <servers />
   </component>
@@ -97,9 +102,9 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1578766914706" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1578767039945">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1578768138243">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1578767039945" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1578768138243" />
   </component>
 </project>
