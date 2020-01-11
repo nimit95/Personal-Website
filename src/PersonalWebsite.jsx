@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import Paper from '@material-ui/core/Paper'
 import SideDrawer from "./SideDrawer"
+import MainContent from "./MainContent";
 
 function PersonalWebsite() {
   return (
@@ -14,6 +15,7 @@ function PersonalWebsite() {
       >
       <Navbar />
       <SideDrawer />
+      <MainContent />
     </Paper>
   );
 }

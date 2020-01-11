@@ -59,7 +59,7 @@ function Navbar(props) {
 
   return (
 
-    <AppBar position="fixed" className={classes.appBar}>
+    <AppBar position="sticky" className={classes.appBar}>
       <Toolbar >
         {/*<Typography variant="h5">OKR Todo</Typography>*/}
         <div className={classes.toolbarDiv}>
