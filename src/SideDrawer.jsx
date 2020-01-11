@@ -18,7 +18,7 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Avatar from '@material-ui/core/Avatar'
 
-import data from '../config'
+import data from './config/config.json'
 
 import SvgIcon from "@material-ui/core/SvgIcon";
 
@@ -44,6 +44,7 @@ const useStyles = makeStyles(theme => ({
 }));
 function SideDrawer(props) {
 
+  console.log(data);
   const classes = useStyles();
   return (
     <Drawer
