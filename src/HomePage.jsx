@@ -1,16 +1,17 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import {makeStyles, Grid, Icon} from "@material-ui/core";
+import {makeStyles, Grid, Icon, Container} from "@material-ui/core";
 import Favorite from "@material-ui/icons/Favorite"
 import data from './config/config.json'
 import AnimateText from "./AnimateText";
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import AnimatedRightIcon from "./AnimatedRightIcon";
 
 const useStyle = makeStyles(theme => ({
   root: {
+    backgroundColor: "#0A192F",
     flexGrow: 1,
-    width: '100%',
-    display: 'flex',
-    justifyContent: 'center'
+    height: "100%"
   },
   typography: {
     align: "center"
@@ -55,7 +56,7 @@ const useStyle = makeStyles(theme => ({
     fontSize: "30px",
   },
   pageContent: {
-    paddingTop: theme.spacing(10)
+    paddingTop: theme.spacing(10),
   }
 }));
 
@@ -64,44 +65,51 @@ function HomePage() {
   console.log("rerendering")
   return (
     // <div className={classes.root}>
-    <Grid
-      container
-      spacing={0}
-      direction="column"
-      alignItems="center"
-      className={classes.pageContent}
-    >
+    <div className={`${classes.root}`}>
+      <Grid
+        container
+        spacing={0}
+        direction="column"
+        alignItems="center"
+        className={classes.pageContent}>
 
-      <Grid item xs={6}>
-        <Typography variant="h4" gutterBottom className={classes.introduction}>
-          Hello! I am,
-        </Typography>
-      </Grid>
-      <Grid item xs={6}>
-        <Typography variant="h3" gutterBottom className={classes.name}>
-          {data.name.toUpperCase()}
-        </Typography>
+        <Grid item xs={6}>
+          <Typography variant="h4" gutterBottom className={classes.introduction}>
+            Hello! I am,
+          </Typography>
+        </Grid>
+        <Grid item xs={6}>
+          <Typography variant="h3" gutterBottom className={classes.name}>
+            {data.name.toUpperCase()}
+          </Typography>
+        </Grid>
+
+        <Grid item xs={6}>
+          <Typography variant="h3" gutterBottom className={classes.description}>
+            {data.description}
+          </Typography>
+        </Grid>
+
+        <Grid container xs={12} direction="row" justify="flex-end">
+          <Grid item>
+            <AnimatedRightIcon/>
+          </Grid>
+        </Grid>
+
+
+        <Grid item xs={6}>
+          <Typography variant="h3" gutterBottom className={classes.favouriteText}>
+            I <Favorite style={{width: "36px", height: "36px", color: "#ff0000"}}/>
+          </Typography>
+        </Grid>
+        <Grid item xs={6}>
+          <Typography variant="h3" gutterBottom className={classes.favourite}>
+            <AnimateText text={data.favourite}/>
+          </Typography>
+        </Grid>
       </Grid>
 
-      <Grid item xs={6}>
-        <Typography variant="h3" gutterBottom className={classes.description}>
-          {data.description}
-        </Typography>
-      </Grid>
-
-
-      <Grid item xs={6}>
-      <Typography variant="h3" gutterBottom className={classes.favouriteText}>
-        I <Favorite style={{width:"36px", height:"36px", color:"#ff0000"}}/>
-      </Typography>
-      </Grid>
-      <Grid item xs={6}>
-        <Typography variant="h3" gutterBottom className={classes.favourite}>
-          <AnimateText text={data.favourite}/>
-        </Typography>
-      </Grid>
-    </Grid>
-
+    </div>
     // </div>
   )
 }

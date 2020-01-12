@@ -28,13 +28,14 @@ const useStyles = makeStyles(theme => ({
     width: theme.spacing(12) + 1,
     flexShrink: 0,
     whiteSpace: 'nowrap',
-    overflowX: 'hidden',
     background: "#0A192F",
+    overflowX: 'hidden',
     borderRight: "1px solid #FFFFFF",
     boxShadow: "0px 5.5px 5px rgba(0, 0, 0, 0.24), 0px 9px 18px rgba(0, 0, 0, 0.18)",
     display: "flex",
     flexDirection: "column",
-    justifyContent: "center"
+    justifyContent: "center",
+
   },
   gravatar: {
     width: '65px',

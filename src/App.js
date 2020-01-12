@@ -1,15 +1,13 @@
 import React from 'react';
 import PersonalWebsite from "./PersonalWebsite";
-import './App.css';
 import {BrowserRouter} from 'react-router-dom'
+import './App.css'
 
 function App() {
   return (
-    <div>
       <BrowserRouter>
         <PersonalWebsite/>
       </BrowserRouter>
-    </div>
   );
 }
 
