@@ -97,7 +97,7 @@ function HomePage() {
       </Grid>
       <Grid item xs={6}>
         <Typography variant="h3" gutterBottom className={classes.favourite}>
-          <AnimateText text={["Learning things", "Solving real problems", "Faster Development cycles"]}/>
+          <AnimateText text={data.favourite}/>
         </Typography>
       </Grid>
     </Grid>
