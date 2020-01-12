@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Paper from '@material-ui/core/Paper'
 import SideDrawer from "./SideDrawer"
 import MainContent from "./MainContent";
+import Router from './Router'
 
 function PersonalWebsite() {
   return (
@@ -16,7 +17,7 @@ function PersonalWebsite() {
 
       <Navbar />
       <SideDrawer />
-      <MainContent />
+      <Router />
     </Paper>
   );
 }

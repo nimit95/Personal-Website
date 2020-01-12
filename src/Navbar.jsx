@@ -56,6 +56,10 @@ const useStyles = makeStyles(theme => ({
 
 function Navbar(props) {
   const classes = useStyles();
+  const activeStyle = {
+    fontWeight: "bold",
+    color: "mediumorchid"
+  };
 
   return (
 
@@ -66,16 +70,16 @@ function Navbar(props) {
           <Grid container direction="row" justify="flex-end" alignItems="center">
             <Grid item >
               <nav className={classes.toolbarTitle}>
-                <NavLink exact to="/about" activeStyle={classes.activeStyle}>
+                <NavLink exact to="/about" activeStyle={activeStyle}>
                   01. About
                 </NavLink>
-                <NavLink to="/experience" activeStyle={classes.activeStyle}>
+                <NavLink to="/experience">
                   02. Experience
                 </NavLink>
-                <NavLink to="/work" activeStyle={classes.activeStyle}>
+                <NavLink to="/work">
                   03. Work
                 </NavLink>
-                <NavLink to="/contact" activeStyle={classes.activeStyle}>
+                <NavLink to="/contact" >
                   04. Contact
                 </NavLink>
                 <Button variant="outlined" className={classes.navButton}>
