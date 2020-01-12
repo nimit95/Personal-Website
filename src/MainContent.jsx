@@ -7,15 +7,12 @@ import HomePage from './HomePage';
 
 import {useTransition, animated} from 'react-spring'
 
-import {Container, makeStyles, Grid} from '@material-ui/core'
+import {Container, makeStyles, Grid, Paper} from '@material-ui/core'
 
 
 const useStyles = makeStyles(theme => ({
   // Load app bar information from the theme
-  toolbar: theme.mixins.toolbar,
-  root: {
-    flexGrow: 1,
-  }
+  root: theme.mixins.toolbar,
 }));
 
 
@@ -65,8 +62,8 @@ function Viewpager() {
 function MainContent() {
   const classes = useStyles();
   return (
-    <Container className={`${classes.toolbar}`}>
-      <HomePage />
+    <Container className={classes.root}>
+      <HomePage/>
     </Container>
   )
 }
