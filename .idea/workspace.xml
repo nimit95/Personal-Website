@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce828d42-9e66-44cf-afab-b613124c2325" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/MainContent.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainContent.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainContent.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PersonalWebsite.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PersonalWebsite.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -14,6 +16,13 @@
   </component>
   <component name="FavoritesManager">
     <favorites_list name="personal-website" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -46,9 +55,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/images" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
     <property name="settings.editor.selected.configurable" value="preferences.customizations" />
     <property name="ts.external.directory.path" value="$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external" />
   </component>
@@ -84,7 +95,7 @@
       <updated>1578732541281</updated>
       <workItem from="1578732544283" duration="34000" />
       <workItem from="1578732611382" duration="11071000" />
-      <workItem from="1578766708845" duration="2825000" />
+      <workItem from="1578766708845" duration="9862000" />
     </task>
     <servers />
   </component>
@@ -100,6 +111,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="229" y="89" key="SettingsEditor/0.0.1440.900@0.0.1440.900" timestamp="1578766914706" />
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2" timestamp="1578806898306">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578806898306" />
     <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1578768138243">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

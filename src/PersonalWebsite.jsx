@@ -13,6 +13,7 @@ function PersonalWebsite() {
       backgroundColor: "#0A192F"}}
            elevation={0}
       >
+
       <Navbar />
       <SideDrawer />
       <MainContent />
