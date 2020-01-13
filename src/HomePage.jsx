@@ -6,6 +6,8 @@ import data from './config/config.json'
 import AnimateText from "./AnimateText";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import AnimatedRightIcon from "./AnimatedRightIcon";
+import { useHistory } from "react-router-dom";
+
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -60,8 +62,11 @@ const useStyle = makeStyles(theme => ({
   }
 }));
 
-function HomePage() {
+function HomePage(props) {
   const classes = useStyle();
+  const history = useHistory();
+
+
   console.log("rerendering")
   return (
     // <div className={classes.root}>
@@ -92,7 +97,7 @@ function HomePage() {
 
         <Grid container xs={12} direction="row" justify="flex-end">
           <Grid item>
-            <AnimatedRightIcon/>
+            <AnimatedRightIcon onClick={() => {history.replace("/about")}}/>
           </Grid>
         </Grid>
 
