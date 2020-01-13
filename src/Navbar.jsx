@@ -58,7 +58,6 @@ function Navbar(props) {
   const classes = useStyles();
   const activeStyle = {
     fontWeight: "bold",
-    color: "mediumorchid"
   };
 
   return (
@@ -73,13 +72,13 @@ function Navbar(props) {
                 <NavLink exact to="/about" activeStyle={activeStyle}>
                   01. About
                 </NavLink>
-                <NavLink to="/experience">
+                <NavLink to="/experience" activeStyle={activeStyle}>
                   02. Experience
                 </NavLink>
-                <NavLink to="/work">
+                <NavLink to="/work"activeStyle={activeStyle}>
                   03. Work
                 </NavLink>
-                <NavLink to="/contact" >
+                <NavLink to="/contact" activeStyle={activeStyle}>
                   04. Contact
                 </NavLink>
                 <Button variant="outlined" className={classes.navButton}>
