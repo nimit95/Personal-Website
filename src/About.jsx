@@ -45,7 +45,7 @@ function About(props) {
       <Grid container direction="row" justify="space-between" alignItems="center">
         <Grid item xs={0.5}>
           <AnimatedLeftIcon onClick={() => {
-            props.history.replace("/")
+            props.history.replace("/?back")
           }}/>
         </Grid>
 

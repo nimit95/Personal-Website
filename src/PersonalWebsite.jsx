@@ -15,7 +15,7 @@ const useStyle = makeStyles(theme => ({
   },
   content: {
     flexGrow: 1,
-    backgroundColor: "#8892b0"
+    backgroundColor: "#c5c6c7"
   },
   toolbar: {
     ...theme.mixins.toolbar,
