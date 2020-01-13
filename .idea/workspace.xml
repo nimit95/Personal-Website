@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce828d42-9e66-44cf-afab-b613124c2325" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/AnimatedLeftIcon.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Experience.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/About.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AnimatedRightIcon.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/AnimatedRightIcon.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/HomePage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/HomePage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Navbar.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Navbar.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Router.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Router.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SideDrawer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SideDrawer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -95,7 +101,7 @@
       <workItem from="1578732544283" duration="34000" />
       <workItem from="1578732611382" duration="11071000" />
       <workItem from="1578766708845" duration="20825000" />
-      <workItem from="1578842618095" duration="10174000" />
+      <workItem from="1578842618095" duration="16676000" />
     </task>
     <servers />
   </component>
@@ -103,6 +109,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="422" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578909014379">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="422" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1578909014379" />
     <state x="408" y="193" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1578732564966">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -127,10 +137,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state width="600" height="424" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1578826537620" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1578857975588">
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1578927667781">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1578857975588" />
+    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1578927667781" />
     <state x="385" y="198" width="670" height="603" key="search.everywhere.popup/0.23.1440.802@0.23.1440.802" timestamp="1578843858267" />
   </component>
 </project>

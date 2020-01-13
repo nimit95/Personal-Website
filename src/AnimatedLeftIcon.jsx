@@ -1,5 +1,5 @@
 import React from "react";
-import ChevronRightIcon from "@material-ui/icons/ChevronRight";
+import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import {useTransition, animated, config, useSpring} from 'react-spring'
 
 const handleAnim = async next => {
@@ -15,7 +15,7 @@ const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWid
 const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 
-function AnimatedRightIcon({onClick}) {
+function AnimatedLeftIcon({onClick}) {
 
   const props = useSpring({
     to: handleAnim,
@@ -27,7 +27,7 @@ function AnimatedRightIcon({onClick}) {
   const [props2, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
 // ...
 
-  const Icon = animated(ChevronRightIcon);
+  const Icon = animated(ChevronLeftIcon);
   return (
     <Icon style={{...props,...props2, transform: props2.xys.interpolate(trans), cursor: "pointer"}} onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
           onMouseLeave={() => set({ xys: [0, 0, 1] })} onClick={onClick}
@@ -35,4 +35,4 @@ function AnimatedRightIcon({onClick}) {
   )
 }
 
-export default AnimatedRightIcon;
+export default AnimatedLeftIcon;

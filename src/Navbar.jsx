@@ -15,7 +15,7 @@ const useStyles = makeStyles(theme => ({
   },
   appBar: {
     borderBottom: `1px solid ${theme.palette.divider}`,
-    backgroundColor: "#172A45",
+    backgroundColor: "#0b0c10",
     zIndex: theme.zIndex.drawer + 1,
   },
   toolbarDiv: {

@@ -11,7 +11,7 @@ import { useHistory } from "react-router-dom";
 
 const useStyle = makeStyles(theme => ({
   root: {
-    backgroundColor: "#0A192F",
+    backgroundColor: "#1f2833",
     flexGrow: 1,
     height: "100%"
   },
@@ -19,7 +19,7 @@ const useStyle = makeStyles(theme => ({
     align: "center"
   },
   introduction: {
-    color: "#64FFDA",
+    color: "#c5c6c7",
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -27,7 +27,7 @@ const useStyle = makeStyles(theme => ({
     lineHeight: "24px"
   },
   name: {
-    color: "#E6F1FF",
+    color: "#66fcf1",
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -35,7 +35,7 @@ const useStyle = makeStyles(theme => ({
     // lineHeight: "24px"
   },
   description: {
-    color: "#E6F1FF",
+    color: "#c5c6c7",
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -43,7 +43,7 @@ const useStyle = makeStyles(theme => ({
     // lineHeight: "40px"
   },
   favouriteText: {
-    color: "#E6F1FF",
+    color: "#c5c6c7",
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -51,7 +51,7 @@ const useStyle = makeStyles(theme => ({
     fontSize: "46px",
   },
   favourite: {
-    color: "#64FFDA",
+    color: "#66fcf1",
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -97,7 +97,7 @@ function HomePage(props) {
 
         <Grid container xs={12} direction="row" justify="flex-end">
           <Grid item>
-            <AnimatedRightIcon onClick={() => {history.replace("/about")}}/>
+            <AnimatedRightIcon onClick={() => {history.push("/about")}}/>
           </Grid>
         </Grid>
 

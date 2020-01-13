@@ -3,6 +3,7 @@ import {Switch, Route, Redirect, useLocation} from "react-router-dom";
 import { useTransition, animated, config, useSpring } from 'react-spring'
 import HomePage from "./HomePage";
 import About from './About'
+import Experience from './Experience'
 import {makeStyles} from "@material-ui/core";
 
 const useStyle = makeStyles(theme => ({
@@ -25,6 +26,7 @@ function Router() {
       <Switch>
         <Route exact path="/" render={(props) => <HomePage {...props} />}/>
         <Route exact path="/about" render={(props) => <About {...props}/>}/>
+        <Route exact path="/experience" render={(props) => <Experience {...props}/>}/>
       </Switch>
     </animated.div>
   ));

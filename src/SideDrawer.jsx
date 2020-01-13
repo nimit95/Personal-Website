@@ -28,7 +28,7 @@ const useStyles = makeStyles(theme => ({
     width: theme.spacing(12) + 1,
     flexShrink: 0,
     whiteSpace: 'nowrap',
-    background: "#0A192F",
+    background: "#0b0c10",
     overflowX: 'hidden',
     borderRight: "1px solid #FFFFFF",
     boxShadow: "0px 5.5px 5px rgba(0, 0, 0, 0.24), 0px 9px 18px rgba(0, 0, 0, 0.18)",
