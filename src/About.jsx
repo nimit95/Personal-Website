@@ -53,7 +53,7 @@ function About(props) {
           <Grid item>
             <div>
               <img className={classes.centerCropped}
-                   src={"https://avatars0.githubusercontent.com/u/14093420?s=460&v=4"}
+                   src={data.aboutPictureURL}
                    alt="recipe thumbnail"/>
             </div>
           </Grid>
