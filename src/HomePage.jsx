@@ -3,9 +3,9 @@ import Typography from "@material-ui/core/Typography";
 import {makeStyles, Grid, Icon, Container} from "@material-ui/core";
 import Favorite from "@material-ui/icons/Favorite"
 import data from './config/config.json'
-import AnimateText from "./AnimateText";
+import AnimateText from "./Animations/AnimateText";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import AnimatedRightIcon from "./AnimatedRightIcon";
+import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
 import { useHistory } from "react-router-dom";
 
 

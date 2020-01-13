@@ -2,8 +2,8 @@ import React from "react"
 import {Container, makeStyles, Grid, Card, CardContent} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import data from "./config/config";
-import AnimatedRightIcon from "./AnimatedRightIcon";
-import AnimatedLeftIcon from "./AnimatedLeftIcon";
+import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
+import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
 
 
 const useStyle = makeStyles(theme => ({
