@@ -6,6 +6,7 @@ import data from './config/config.json'
 import AnimateText from "./Animations/AnimateText";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
+import AnimatedFavoriteIcon from './Animations/AnimatedFavoriteIcon'
 import { useHistory } from "react-router-dom";
 
 
@@ -104,7 +105,7 @@ function HomePage(props) {
 
         <Grid item xs={6}>
           <Typography variant="h3" gutterBottom className={classes.favouriteText}>
-            I <Favorite style={{width: "36px", height: "36px", color: "#ff0000"}}/>
+            I <AnimatedFavoriteIcon/>
           </Typography>
         </Grid>
         <Grid item xs={6}>
