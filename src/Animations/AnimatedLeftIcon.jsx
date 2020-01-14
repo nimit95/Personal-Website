@@ -15,7 +15,7 @@ const calc = (x, y) => [-(y - window.innerHeight / 2) / 20, (x - window.innerWid
 const trans = (x, y, s) => `perspective(600px) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`
 
 
-function AnimatedLeftIcon({onClick}) {
+function AnimatedLeftIcon({onClick, disabled}) {
 
   const props = useSpring({
     to: handleAnim,
@@ -29,6 +29,7 @@ function AnimatedLeftIcon({onClick}) {
 
   const Icon = animated(ChevronLeftIcon);
   return (
+    disabled ? <ChevronLeftIcon style={{ height: '100px', width: '100px', display:"none"}}/>:
     <Icon style={{...props,...props2, transform: props2.xys.interpolate(trans), cursor: "pointer"}} onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
           onMouseLeave={() => set({ xys: [0, 0, 1] })} onClick={onClick}
     />

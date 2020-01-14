@@ -7,7 +7,8 @@ import AnimateText from "./Animations/AnimateText";
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
 import AnimatedFavoriteIcon from './Animations/AnimatedFavoriteIcon'
-import { useHistory } from "react-router-dom";
+import {useHistory} from "react-router-dom";
+import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
 
 
 const useStyle = makeStyles(theme => ({
@@ -72,49 +73,54 @@ function HomePage(props) {
   return (
     // <div className={classes.root}>
     <div className={`${classes.root}`}>
-      <Grid
-        container
-        spacing={0}
-        direction="column"
-        alignItems="center"
-        className={classes.pageContent}>
-
-        <Grid item xs={6}>
-          <Typography variant="h4" gutterBottom className={classes.introduction}>
-            Hello! I am,
-          </Typography>
+      <Grid container direction="row" justify="space-between" alignItems="center" style={{height: "100%"}}>
+        <Grid item xs={0.5}>
+          <AnimatedLeftIcon disabled/>
         </Grid>
-        <Grid item xs={6}>
-          <Typography variant="h3" gutterBottom className={classes.name}>
-            {data.name.toUpperCase()}
-          </Typography>
-        </Grid>
+        <Grid
+          container
+          item
+          xs={10}
+          spacing={0}
+          direction="column"
+          alignItems="center"
+          className={classes.pageContent}>
 
-        <Grid item xs={6}>
-          <Typography variant="h3" gutterBottom className={classes.description}>
-            {data.description}
-          </Typography>
-        </Grid>
+          <Grid item xs={6}>
+            <Typography variant="h4" gutterBottom className={classes.introduction}>
+              Hello! I am,
+            </Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Typography variant="h3" gutterBottom className={classes.name}>
+              {data.name.toUpperCase()}
+            </Typography>
+          </Grid>
 
-        <Grid container xs={12} direction="row" justify="flex-end">
-          <Grid item>
-            <AnimatedRightIcon onClick={() => {history.push("/about")}}/>
+          <Grid item xs={6}>
+            <Typography variant="h3" gutterBottom className={classes.description}>
+              {data.description}
+            </Typography>
+          </Grid>
+
+
+          <Grid item xs={6}>
+            <Typography variant="h3" gutterBottom className={classes.favouriteText}>
+              I <AnimatedFavoriteIcon/>
+            </Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Typography variant="h3" gutterBottom className={classes.favourite}>
+              <AnimateText text={data.favourite}/>
+            </Typography>
           </Grid>
         </Grid>
-
-
-        <Grid item xs={6}>
-          <Typography variant="h3" gutterBottom className={classes.favouriteText}>
-            I <AnimatedFavoriteIcon/>
-          </Typography>
-        </Grid>
-        <Grid item xs={6}>
-          <Typography variant="h3" gutterBottom className={classes.favourite}>
-            <AnimateText text={data.favourite}/>
-          </Typography>
+        <Grid item>
+          <AnimatedRightIcon onClick={() => {
+            history.push("/about")
+          }}/>
         </Grid>
       </Grid>
-
     </div>
     // </div>
   )
