@@ -15,7 +15,8 @@ const useStyle = makeStyles(theme => ({
   },
   content: {
     flexGrow: 1,
-    backgroundColor: "#c5c6c7"
+    backgroundColor: "#c5c6c7",
+    height:"100%"
   },
   toolbar: {
     ...theme.mixins.toolbar,
@@ -28,11 +29,13 @@ function PersonalWebsite() {
     <div className={classes.root}>
       <CssBaseline/>
       <Navbar/>
+
       <SideDrawer/>
-      <main className={classes.content}>
-        <div className={classes.toolbar}/>
-        <Router/>
-      </main>
+
+      <div className={classes.content}>
+        {/*<div className={classes.toolbar}/>*/}
+        <Router className={classes.root}/>
+      </div>
     </div>
   );
 }
