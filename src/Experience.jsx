@@ -20,12 +20,13 @@ const useStyle = makeStyles(theme => ({
   },
   heading: {
     fontSize: theme.typography.pxToRem(15),
-    flexBasis: '33.33%',
-    flexShrink: 0,
+    flexBasis: '75%',
+    color: "#e6f1ff"
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
-    color: theme.palette.text.secondary,
+    color: "#e6f1ff",
+    flexBasis: '25%',
   },
   pageName: {
     color: "#66fcf1",
@@ -33,13 +34,46 @@ const useStyle = makeStyles(theme => ({
     fontStyle: "normal",
     fontWeight: "300",
     fontSize: "30px",
+  },
+  expansionDetail: {
+    flexDirection: "column"
+  },
+  expansionPanel: {
+    backgroundColor: "#333f58",
+    color: "#e6f1ff",
+    border: '1px solid rgba(0, 0, 0, .125)',
+    boxShadow: 'none',
+    '&:not(:last-child)': {
+      borderBottom: 0,
+    },
+    '&:before': {
+      display: 'none',
+    },
+    '&$expanded': {
+      margin: 'auto',
+    },
+
+  },
+  expansionPanelSummary: {
+    backgroundColor: 'rgba(0, 0, 0, .03)',
+    borderBottom: '1px solid rgba(0, 0, 0, .125)',
+    marginBottom: -1,
+    minHeight: 56,
+    '&$expanded': {
+      minHeight: 56,
+    },
+    content: {
+      '&$expanded': {
+        margin: '12px 0',
+      },
+    },
   }
 }));
 
 function Experience(props) {
   const classes = useStyle();
 
-  const [expanded, setExpanded] = React.useState('panel1');
+  const [expanded, setExpanded] = React.useState('panel0');
 
   const handleChange = panel => (event, isExpanded) => {
     setExpanded(isExpanded ? panel : false);
@@ -48,87 +82,43 @@ function Experience(props) {
   return (
     <div className={classes.root}>
 
-      <Grid container direction="row" justify="space-between" alignItems="center" style={{height:"100%"}}>
+      <Grid container direction="row" justify="space-between" alignItems="center" style={{height: "100%"}}>
         <Grid item xs={0.5}>
           <AnimatedLeftIcon onClick={() => {
             props.history.replace("/about?back")
           }}/>
         </Grid>
-        <Grid container item xs={10} alignItems="center" justify="space-between" direction="column">
+        <Grid container item xs={10} alignItems="center" justify="space-evenly" direction="column">
           <Grid item>
             <Typography variant="h3" gutterBottom className={classes.pageName}>
               My Experience!
             </Typography>
           </Grid>
-          <Grid item></Grid>
           <Grid item>
-            <ExpansionPanel expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-              <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon/>}
-                aria-controls="panel1bh-content"
-                id="panel1bh-header"
-              >
-                <Typography className={classes.heading}>General settings</Typography>
-                <Typography className={classes.secondaryHeading}>I am an expansion panel</Typography>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <Typography>
-                  Nulla facilisi. Phasellus sollicitudin nulla et quam mattis feugiat. Aliquam eget
-                  maximus est, id dignissim quam.
-                </Typography>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
-            <ExpansionPanel expanded={expanded === 'panel2'} onChange={handleChange('panel2')}>
-              <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon/>}
-                aria-controls="panel2bh-content"
-                id="panel2bh-header"
-              >
-                <Typography className={classes.heading}>Users</Typography>
-                <Typography className={classes.secondaryHeading}>
-                  You are currently not an owner
-                </Typography>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <Typography>
-                  Donec placerat, lectus sed mattis semper, neque lectus feugiat lectus, varius pulvinar
-                  diam eros in elit. Pellentesque convallis laoreet laoreet.
-                </Typography>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
-            <ExpansionPanel expanded={expanded === 'panel3'} onChange={handleChange('panel3')}>
-              <ExpansionPanelSummary
-                expandIcon={<ExpandMoreIcon/>}
-                aria-controls="panel3bh-content"
-                id="panel3bh-header"
-              >
-                <Typography className={classes.heading}>Advanced settings</Typography>
-                <Typography className={classes.secondaryHeading}>
-                  Filtering has been entirely disabled for whole web server
-                </Typography>
-              </ExpansionPanelSummary>
-              <ExpansionPanelDetails>
-                <Typography>
-                  Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
-                  vitae egestas augue. Duis vel est augue.
-                </Typography>
-              </ExpansionPanelDetails>
-            </ExpansionPanel>
-            <ExpansionPanel expanded={expanded === 'panel4'} onChange={handleChange('panel4')}>
-            <ExpansionPanelSummary
-              expandIcon={<ExpandMoreIcon/>}
-              aria-controls="panel4bh-content"
-              id="panel4bh-header"
-            >
-              <Typography className={classes.heading}>Personal data</Typography>
-            </ExpansionPanelSummary>
-            <ExpansionPanelDetails>
-              <Typography>
-                Nunc vitae orci ultricies, auctor nunc in, volutpat nisl. Integer sit amet egestas eros,
-                vitae egestas augue. Duis vel est augue.
-              </Typography>
-            </ExpansionPanelDetails>
-          </ExpansionPanel>
+            {data.experience.map((exp, i) => (
+              <ExpansionPanel expanded={expanded === `panel${i}`} className={classes.expansionPanel}
+                              onChange={handleChange(`panel${i}`)}>
+                <ExpansionPanelSummary
+                  expandIcon={<ExpandMoreIcon style={{color:"#e6f1ff"}}/>}
+                  aria-controls="panel1bh-content"
+                  id="panel1bh-header"
+                  className={classes.expansionPanelSummary}
+                >
+                  <Typography className={classes.heading}>{i+1}. {exp.name}</Typography>
+                  <Typography className={classes.secondaryHeading}>{exp.position}</Typography>
+                  <Typography className={classes.secondaryHeading}>{exp.time}</Typography>
+                </ExpansionPanelSummary>
+                <ExpansionPanelDetails className={classes.expansionDetail}>
+                  {exp.description.split("\n").map(para => (
+                    <Typography paragraph>
+                      {para}
+                    </Typography>
+                  ))}
+
+                </ExpansionPanelDetails>
+              </ExpansionPanel>
+            ))}
+
           </Grid>
         </Grid>
         <Grid item xs={0.5}> <AnimatedRightIcon onClick={() => {

@@ -13,10 +13,9 @@ const useStyle = makeStyles(theme => ({
     height: "100%"
   },
   aboutTxt: {
-    color: "#c5c6c7",
+    color: "#e6f1ff",
     fontFamily: "Roboto",
     fontStyle: "normal",
-    fontWeight: "300",
     fontSize: "18px",
     textAlign: "justify"
   },
