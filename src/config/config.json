@@ -23,13 +23,42 @@
       "link": "https://twitter.com/nimit95"
     }
   ],
-  "favourite": ["Food", "Learning things", "Solving Real Problems", "Swimming"],
+  "favourite": [
+    "Food",
+    "Learning things",
+    "Solving Real Problems",
+    "Swimming"
+  ],
   "aboutText": "Hello! I am working with BrowserStack as a Senior Software Engineer. I completed B.Tech in Computer Science and Engineering in 2018.\n\nStrong data structures, algorithms and problem-solving skills, fast learner, technology enthusiast, impact-oriented.\nI recently got a Mobile Web specialist certification from Google and has also completed Udacity's Mobile Web specialist Nanodegree.\n\nI have been an SDE intern and TA in Algo at Coding Blocks. I have also completed Udacity's Android Developer, Nanodegree by Google. I've completed Machine Learning and Algorithm Analysis and Design on Coursera.\n\nI am driven by challenging, fast-paced, exciting, and educational environments. My areas of interest include web and mobile application development.",
   "aboutPictureURL": "https://avatars0.githubusercontent.com/u/14093420?s=460&v=4",
-  "experience" : [{
-    "name": "BrowserStack",
-    "position": "Senior Software Engineer",
-    "time": "",
-    "description": ""
-  }]
+  "experience": [
+    {
+      "name": "BrowserStack",
+      "position": "Senior Software Engineer",
+      "time": "Mar 2019 - Present",
+      "description": "Part of Local Team. Local Testing allows you to test your private and internal servers, alongside public URLs, using the BrowserStack cloud, which has support for firewalls, proxies and Active Directory. Local Testing handles around 1 million sessions per day. Primarily works in Node JS\n• Designed and Defined the metrics for the performance of the system and put them in place.\n• Successful in improving the performance of the system by ~30%\n• Moved all the components to the latest versions(Removed Tech debt)\n• Internal tools and documentation to reduce customer resolution time by ~50%",
+      "link": "https://www.browserstack.com"
+    },
+    {
+      "name": "BrowserStack",
+      "position": "Software Engineer",
+      "time": "Jun 2018 - Mar 2019",
+      "description": "Part of Local Team. Local Testing allows you to test your private and internal servers, alongside public URLs, using the BrowserStack cloud, which has support for firewalls, proxies and Active Directory. Local Testing handles around 1 million sessions per day\n• Helped put metrics in place for the Stability of the system.\n• Fixed the stability of the system to 99.99 %\n• Capacity planning of the whole system, to know when to scale up\n• Solved various ops issues and various client issues.",
+      "link": "https://www.browserstack.com"
+    },
+    {
+      "name": "Google Code-in Mentor",
+      "position": "Software Engineer",
+      "time": "Nov 2017 - Jan 2018",
+      "description": "Google Code-in is a contest to introduce pre-university students (ages 13-17) to open source software development",
+      "link": "https://codein.withgoogle.com/"
+    },
+    {
+      "name": "Coding Block",
+      "position": "Teaching Assistant Algo++",
+      "time": "July 2017 - Aug 2017",
+      "description": "Helping 60 plus students with Data Structures and Algorithms at Algo++",
+      "link": "https://codingblocks.com/"
+    }
+  ]
 }
