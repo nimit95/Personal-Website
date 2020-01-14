@@ -42,7 +42,7 @@ function About(props) {
   const classes = useStyle();
   return (
     <div className={classes.root}>
-      <Grid container direction="row" justify="space-between" alignItems="center">
+      <Grid container direction="row" justify="space-between" alignItems="center" style={{height:"100%"}}>
         <Grid item xs={0.5}>
           <AnimatedLeftIcon onClick={() => {
             props.history.replace("/?back")
