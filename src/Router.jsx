@@ -4,6 +4,7 @@ import { useTransition, animated, config, useSpring } from 'react-spring'
 import HomePage from "./HomePage";
 import About from './About'
 import Experience from './Experience'
+import Work from './Work'
 import {makeStyles} from "@material-ui/core";
 
 const useStyle = makeStyles(theme => ({
@@ -37,6 +38,7 @@ function Router() {
         <Route exact path="/" render={(props) => <HomePage {...props} />}/>
         <Route exact path="/about" render={(props) => <About {...props}/>}/>
         <Route exact path="/experience" render={(props) => <Experience {...props}/>}/>
+        <Route exact path="/work" render={(props) => <Work {...props}/>}/>
       </Switch>
     </animated.div>
   )): transitions2.map(({ item: location, props, key }) => (
@@ -45,6 +47,7 @@ function Router() {
         <Route exact path="/" render={(props) => <HomePage {...props} />}/>
         <Route exact path="/about" render={(props) => <About {...props}/>}/>
         <Route exact path="/experience" render={(props) => <Experience {...props}/>}/>
+        <Route exact path="/work" render={(props) => <Work {...props}/>}/>
       </Switch>
     </animated.div>
   ))
