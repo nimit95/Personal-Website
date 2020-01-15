@@ -7,7 +7,7 @@ import Router from './Router'
 import {makeStyles, CssBaseline} from "@material-ui/core";
 
 /**
- * TODO: like button, journey, personal corner, certification, resume, contact, central theme colours
+ * TODO: like button, journey, personal corner, certification, resume, contact, central theme colours, bottom github made. Add 404 page
  * @type {StylesHook<Styles<Theme, {}, string>>}
  */
 const useStyle = makeStyles(theme => ({

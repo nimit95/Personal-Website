@@ -6,6 +6,8 @@ import About from './About'
 import Experience from './Experience'
 import Work from './Work'
 import {makeStyles} from "@material-ui/core";
+import Contact from "./Contact";
+import Journey from "./Journey";
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -39,6 +41,8 @@ function Router() {
         <Route exact path="/about" render={(props) => <About {...props}/>}/>
         <Route exact path="/experience" render={(props) => <Experience {...props}/>}/>
         <Route exact path="/work" render={(props) => <Work {...props}/>}/>
+        <Route exact path="/journey" render={(props) => <Journey {...props}/>}/>
+        <Route exact path="/contact" render={(props) => <Contact {...props}/>}/>
       </Switch>
     </animated.div>
   )): transitions2.map(({ item: location, props, key }) => (
@@ -48,6 +52,9 @@ function Router() {
         <Route exact path="/about" render={(props) => <About {...props}/>}/>
         <Route exact path="/experience" render={(props) => <Experience {...props}/>}/>
         <Route exact path="/work" render={(props) => <Work {...props}/>}/>
+        <Route exact path="/journey" render={(props) => <Journey {...props}/>}/>
+        <Route exact path="/contact" render={(props) => <Contact {...props}/>}/>
+        {/*<Route path="/" render={(props) => <Contact {...props}/>}/>*/}
       </Switch>
     </animated.div>
   ))

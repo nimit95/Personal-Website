@@ -78,7 +78,7 @@ function Navbar(props) {
                 <NavLink to="/work"activeStyle={activeStyle}>
                   03. Work
                 </NavLink>
-                <NavLink to="/contact" activeStyle={activeStyle}>
+                <NavLink to="/journey" activeStyle={activeStyle}>
                   04. Journey
                 </NavLink>
                 <NavLink to="/contact" activeStyle={activeStyle}>
