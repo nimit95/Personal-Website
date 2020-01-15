@@ -8,7 +8,7 @@ import Avatar from '@material-ui/core/Avatar'
 import Button from '@material-ui/core/Button';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import data from './config/config.json'
-
+import EmailIcon from '@material-ui/icons/Email';
 import SvgIcon from "@material-ui/core/SvgIcon";
 
 
@@ -80,6 +80,9 @@ function SideDrawer(props) {
 
             </ListItem>
           ))}
+          <ListItem button key={"emial"} component="a"  href={`mailto:${data.email}?Subject=Hello`} target="_top">
+            <EmailIcon style={{color:"#ffffff"}}  fontSize="large" />
+          </ListItem>
         </List>
 
       </Grid>

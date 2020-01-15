@@ -79,10 +79,13 @@ function Navbar(props) {
                   03. Work
                 </NavLink>
                 <NavLink to="/contact" activeStyle={activeStyle}>
-                  04. Contact
+                  04. Journey
+                </NavLink>
+                <NavLink to="/contact" activeStyle={activeStyle}>
+                  05. Contact
                 </NavLink>
                 <Button variant="outlined" className={classes.navButton}>
-                    Resume
+                  Resume
                 </Button>
               </nav>
             </Grid>
