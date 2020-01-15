@@ -14,7 +14,7 @@ import Button from "@material-ui/core/Button";
 
 const useStyle = makeStyles(theme => ({
   root: {
-    backgroundColor: "#1f2833",
+    backgroundColor: "#263238",
     flexGrow: 1,
     height: "100%"
   },
