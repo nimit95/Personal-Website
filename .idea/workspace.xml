@@ -3,10 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ce828d42-9e66-44cf-afab-b613124c2325" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Work.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Work.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SideDrawer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/SideDrawer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +96,7 @@
       <workItem from="1578732611382" duration="11071000" />
       <workItem from="1578766708845" duration="20825000" />
       <workItem from="1578842618095" duration="30753000" />
-      <workItem from="1579022324183" duration="19212000" />
+      <workItem from="1579022324183" duration="19466000" />
     </task>
     <servers />
   </component>
@@ -146,10 +143,10 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="320" y="190" key="Vcs.Push.Dialog.v2/0.0.1440.900@0.0.1440.900" timestamp="1578806898306" />
-    <state x="386" y="207" width="667" height="486" key="find.popup" timestamp="1579106433206">
+    <state x="386" y="207" width="667" height="486" key="find.popup" timestamp="1579109085044">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="386" y="207" width="667" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1579106433206" />
+    <state x="386" y="207" width="667" height="486" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1579109085044" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1578826537620">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

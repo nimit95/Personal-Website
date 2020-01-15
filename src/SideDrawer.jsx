@@ -5,6 +5,7 @@ import Divider from "@material-ui/core/Divider";
 import ListItem from "@material-ui/core/ListItem";
 import Grid from '@material-ui/core/Grid';
 import Avatar from '@material-ui/core/Avatar'
+import Button from '@material-ui/core/Button';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import data from './config/config.json'
 
@@ -62,7 +63,7 @@ function SideDrawer(props) {
         alignItems="center"
         justify="center"
         style={{minHeight: '100vh'}}>
-        <Avatar src="https://s.gravatar.com/avatar/33bee907d6bc6fb421926c792051648a?s=80" className={classes.gravatar}/>
+        <Button href={"/"}><Avatar src="https://s.gravatar.com/avatar/33bee907d6bc6fb421926c792051648a?s=80" className={classes.gravatar}/></Button>
         <Divider/>
 
         <List className={classes.drawerList}>
