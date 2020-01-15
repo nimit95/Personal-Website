@@ -9,6 +9,7 @@ import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
 import AnimatedFavoriteIcon from './Animations/AnimatedFavoriteIcon'
 import {useHistory} from "react-router-dom";
 import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
+import Button from "@material-ui/core/Button";
 
 
 const useStyle = makeStyles(theme => ({
@@ -21,7 +22,7 @@ const useStyle = makeStyles(theme => ({
     align: "center"
   },
   introduction: {
-    color: "#c5c6c7",
+    color: "#e6f1ff",
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -37,7 +38,7 @@ const useStyle = makeStyles(theme => ({
     // lineHeight: "24px"
   },
   description: {
-    color: "#c5c6c7",
+    color: "#e6f1ff",
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -45,7 +46,7 @@ const useStyle = makeStyles(theme => ({
     // lineHeight: "40px"
   },
   favouriteText: {
-    color: "#c5c6c7",
+    color: "#e6f1ff",
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -61,6 +62,19 @@ const useStyle = makeStyles(theme => ({
   },
   pageContent: {
     paddingTop: theme.spacing(10),
+  },
+  getInTouchButton: {
+    border: "1px solid #e6f1ff",
+    borderRadius: "2px",
+    margin: theme.spacing(5),
+    padding: theme.spacing(1, 1.5),
+    textDecoration: 'none',
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: 300,
+    fontSize: "16px",
+
+    color: "#66fcf1",
   }
 }));
 
@@ -113,6 +127,11 @@ function HomePage(props) {
             <Typography variant="h3" gutterBottom className={classes.favourite}>
               <AnimateText text={data.favourite}/>
             </Typography>
+          </Grid>
+          <Grid item xs={6}>
+            <Button variant="outlined" className={classes.getInTouchButton} onClick={() => history.push("/contact")}>
+              Get in Touch!
+            </Button>
           </Grid>
         </Grid>
         <Grid item>
