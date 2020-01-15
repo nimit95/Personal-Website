@@ -23,13 +23,13 @@ function Router() {
     from: { opacity: 0.9, transform: 'translate3d(50%,0,0)' },
     enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
     leave: { opacity: 0, transform: 'translate3d(50%,0,0)' },
-    config: {duration: 1000},
+    config: {duration: 800},
   });
   const transitions2 = useTransition(location, location => location.pathname, {
     from: { opacity: 0.9, transform: 'translate3d(-50%,0,0)' },
     enter: { opacity: 1, transform: 'translate3d(0%,0,0)' },
     leave: { opacity: 0, transform: 'translate3d(50%,0,0)' },
-    config: {duration: 1000},
+    config: {duration: 800},
   });
 
   return !location.search ? transitions.map(({ item: location, props, key }) => (
