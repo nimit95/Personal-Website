@@ -10,6 +10,12 @@ import IconButton from '@material-ui/core/IconButton';
 import InfoIcon from '@material-ui/icons/Info';
 import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
 import data from './config/config'
+import ListItem from "@material-ui/core/ListItem";
+import OpenInNewIcon from '@material-ui/icons/OpenInNew';
+import Card from '@material-ui/core/Card';
+import CardActions from '@material-ui/core/CardActions';
+import CardContent from '@material-ui/core/CardContent';
+import Button from '@material-ui/core/Button';
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -36,14 +42,37 @@ const useStyle = makeStyles(theme => ({
   girdListContainer: {
     display: 'flex',
     flexWrap: 'wrap',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
     overflow: 'hidden',
+  },
+  card: {
+    backgroundColor: "#333f58",
+    width: "100%",
+    "&:hover": {background: "#45a29e", cursor:"pointer"}, display: 'flex', justifyContent: 'space-between', flexDirection: 'column'
+  },
+  bullet: {
+    display: 'inline-block',
+    margin: '0 2px',
+    transform: 'scale(0.8)',
+  },
+  projectName: {
+    fontSize: 14,
+    color: "#e6f1ff"
+  },
+  pos: {
+    marginBottom: 12,
+  },
+  description: {
+    color: "#e6f1ff",
+    textAlign: "justify"
   }
 }));
 
 function Work(props) {
 
   const classes = useStyle();
+  const bull = <span className={classes.bullet}>•</span>;
+
   return (
     <div className={classes.root}>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{height: "100%"}}>
@@ -52,32 +81,31 @@ function Work(props) {
             props.history.replace("/experience?back")
           }}/>
         </Grid>
-        <Grid container item xs={10} alignItems="center" justify="space-evenly" direction="column">
+        <Grid container item xs={10} alignItems="stretch" justify="center" direction="column"
+              style={{textAlign: "center"}}>
           <Grid item>
-            <Typography variant="h3" gutterBottom className={classes.pageName}>
+            <Typography variant="h3" gutterBottom className={classes.pageName} alignItems="center" justify="center">
               My Work!
             </Typography>
-            <div className={classes.girdListContainer}>
-              <GridList cellHeight={180} className={classes.gridList}>
-                <GridListTile key="Subheader" cols={2} style={{height: 'auto'}}>
-                  <ListSubheader component="div">December</ListSubheader>
-                </GridListTile>
-                {data.projectData.map(tile => (
-                  <GridListTile key={tile.img}>
-                    <img src={tile.img} alt={tile.title}/>
-                    <GridListTileBar
-                      title={tile.title}
-                      subtitle={<span>by: {tile.author}</span>}
-                      actionIcon={
-                        <IconButton aria-label={`info about ${tile.title}`} className={classes.icon}>
-                          <InfoIcon/>
-                        </IconButton>
-                      }
-                    />
-                  </GridListTile>
-                ))}
-              </GridList>
-            </div>
+            <Grid container spacing={1} className={classes.girdListContainer}>
+              {data.projectData.map(exp => (
+                <Grid item xs={4} style={{display: "flex"}}>
+                  <Card className={classes.card} variant="outlined">
+                    <CardContent>
+                      <Typography className={classes.projectName} gutterBottom>
+                        {exp.name}
+                      </Typography>
+                      <Typography variant="body2" component="p" className={classes.description}>
+                        {exp.description}
+                      </Typography>
+                    </CardContent>
+                    <CardActions style={{justifyContent: "flex-end"}}>
+                      <Button size="small" target="_blank" href={exp.link}><OpenInNewIcon fontSize="medium"/></Button>
+                    </CardActions>
+                  </Card>
+                </Grid>
+              ))}
+            </Grid>
           </Grid>
         </Grid>
         <Grid item xs={0.5}> <AnimatedRightIcon onClick={() => {
