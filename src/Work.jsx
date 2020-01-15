@@ -16,6 +16,7 @@ import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
+import Feed from "rss-to-json"
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -48,7 +49,10 @@ const useStyle = makeStyles(theme => ({
   card: {
     backgroundColor: "#333f58",
     width: "100%",
-    "&:hover": {background: "#45a29e", cursor:"pointer"}, display: 'flex', justifyContent: 'space-between', flexDirection: 'column'
+    "&:hover": {background: "#45a29e", cursor: "pointer"},
+    display: 'flex',
+    justifyContent: 'space-between',
+    flexDirection: 'column'
   },
   bullet: {
     display: 'inline-block',
@@ -56,22 +60,63 @@ const useStyle = makeStyles(theme => ({
     transform: 'scale(0.8)',
   },
   projectName: {
-    fontSize: 14,
+    fontSize: 17,
     color: "#e6f1ff"
+  },
+  description: {
+    color: "#e6f1ff",
+    textAlign: "justify",
+    fontSize: 14,
+    fontStyle: "thin",
+    fontWeight: "300",
   },
   pos: {
     marginBottom: 12,
   },
-  description: {
-    color: "#e6f1ff",
-    textAlign: "justify"
+
+  blogHeading: {
+    color: "#66fcf1",
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: "300",
+    fontSize: "25px",
   }
 }));
+
 
 function Work(props) {
 
   const classes = useStyle();
   const bull = <span className={classes.bullet}>•</span>;
+
+  function getBlogWork() {
+    return (
+      <>
+        <Typography variant="h3" gutterBottom className={classes.blogHeading} alignItems="center" justify="center">
+          Blogs!
+        </Typography>
+        <Grid container spacing={1} className={classes.girdListContainer}>
+          {data.blogData.map(exp => (
+            <Grid item xs={4} style={{display: "flex"}}>
+              <Card className={classes.card} variant="outlined">
+                <CardContent>
+                  <Typography className={classes.projectName} gutterBottom>
+                    {exp.name}
+                  </Typography>
+                  <Typography variant="body2" component="p" className={classes.description}>
+                    {exp.description}
+                  </Typography>
+                </CardContent>
+                <CardActions style={{justifyContent: "flex-end"}}>
+                  <Button size="small" target="_blank" href={exp.link}><OpenInNewIcon fontSize="medium"/></Button>
+                </CardActions>
+              </Card>
+            </Grid>
+          ))}
+        </Grid>
+      </>
+    )
+  }
 
   return (
     <div className={classes.root}>
@@ -105,7 +150,9 @@ function Work(props) {
                   </Card>
                 </Grid>
               ))}
+
             </Grid>
+            {data.blogData && data.blogData.length > 0 && getBlogWork()}
           </Grid>
         </Grid>
         <Grid item xs={0.5}> <AnimatedRightIcon onClick={() => {

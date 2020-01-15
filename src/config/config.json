@@ -96,5 +96,27 @@
     }
 
 
+  ],
+  "blogData": [
+    {
+      "name": "Hello, 2020!",
+      "description": "I wrote a short summary of my 2019 and my plans for the upcoming year 2020.",
+      "link": "https://medium.com/@nimit95/hello-2020-79a4f93e3b8b?source=your_stories_page---------------------------"
+    },
+    {
+      "name": "How to fix app failures on Mac OS Catalina — Notarization",
+      "description": "Fix Mac Catalina app issues.",
+      "link": "https://medium.com/@nimit95/fix-macos-catalina-caused-app-failures-1f9a05d2b0ec?source=your_stories_page---------------------------"
+    },
+    {
+      "name": "SOCKS 5 — A Proxy Protocol",
+      "description": "Explaining SOCKS5 in detail.",
+      "link": "https://medium.com/@nimit95/socks-5-a-proxy-protocol-b741d3bec66c?source=your_stories_page---------------------------"
+    },
+    {
+      "name": "A Simple HTTP/HTTPS Proxy in Node Js",
+      "description": "What is Proxy then making one in Node.js",
+      "link": "https://medium.com/@nimit95/a-simple-http-https-proxy-in-node-js-4eb0444f38fc?source=your_stories_page---------------------------"
+    }
   ]
 }

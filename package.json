@@ -14,7 +14,8 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.3.0",
     "react-spring": "^9.0.0-beta.34",
-    "react-use-gesture": "^6.0.14"
+    "react-use-gesture": "^6.0.14",
+    "rss-to-json": "^1.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
