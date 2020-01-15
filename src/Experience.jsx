@@ -18,6 +18,13 @@ const useStyle = makeStyles(theme => ({
     width: "100%",
     paddingTop: theme.spacing(10)
   },
+  pageName: {
+    color: "#66fcf1",
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: "300",
+    fontSize: "30px",
+  },
   heading: {
     fontSize: theme.typography.pxToRem(15),
     flexBasis: '75%',
@@ -27,16 +34,6 @@ const useStyle = makeStyles(theme => ({
     fontSize: theme.typography.pxToRem(15),
     color: "#e6f1ff",
     flexBasis: '25%',
-  },
-  pageName: {
-    color: "#66fcf1",
-    fontFamily: "Roboto",
-    fontStyle: "normal",
-    fontWeight: "300",
-    fontSize: "30px",
-  },
-  expansionDetail: {
-    flexDirection: "column"
   },
   expansionPanel: {
     backgroundColor: "#333f58",
@@ -67,7 +64,10 @@ const useStyle = makeStyles(theme => ({
         margin: '12px 0',
       },
     },
-  }
+  },
+  expansionDetail: {
+    flexDirection: "column"
+  },
 }));
 
 function Experience(props) {

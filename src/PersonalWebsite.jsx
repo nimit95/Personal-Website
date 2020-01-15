@@ -6,6 +6,10 @@ import MainContent from "./MainContent";
 import Router from './Router'
 import {makeStyles, CssBaseline} from "@material-ui/core";
 
+/**
+ * TODO: like button, ,meduium blogs, journey, personal corner, projects, certification
+ * @type {StylesHook<Styles<Theme, {}, string>>}
+ */
 const useStyle = makeStyles(theme => ({
   root: {
     padding: "0",
