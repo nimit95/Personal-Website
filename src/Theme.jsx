@@ -17,6 +17,8 @@ const theme = createMuiTheme({
     hoverBackground: blueGrey[700],
     appBarBackground: blueGrey[900],
     drawerBackground: blueGrey[900],
+
+    behindBackground: blueGrey[600],
     // Used by `getContrastText()` to maximize the contrast between
     // the background and the text.
     contrastThreshold: 3,

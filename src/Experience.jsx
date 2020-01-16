@@ -26,13 +26,14 @@ const useStyle = makeStyles(theme => ({
     fontSize: "30px",
   },
   heading: {
-    fontSize: theme.typography.pxToRem(15),
+    fontSize: theme.typography.pxToRem(17),
     flexBasis: '75%',
     color: theme.palette.primary.main
   },
   secondaryHeading: {
-    fontSize: theme.typography.pxToRem(15),
+    fontSize: theme.typography.pxToRem(14),
     color: theme.palette.primary.main,
+    fontStyle: "italic",
     flexBasis: '25%',
   },
   expansionPanel: {
@@ -66,8 +67,15 @@ const useStyle = makeStyles(theme => ({
     },
   },
   expansionDetail: {
-    flexDirection: "column"
+    flexDirection: "column",
   },
+  experienceDescription: {
+    color: theme.palette.primary.main,
+    textAlign: "justify",
+    fontSize: 14,
+    fontStyle: "thin",
+    fontWeight: "300",
+  }
 }));
 
 function Experience(props) {
@@ -110,7 +118,7 @@ function Experience(props) {
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails className={classes.expansionDetail}>
                   {exp.description.split("\n").map(para => (
-                    <Typography paragraph>
+                    <Typography paragraph className={classes.experienceDescription}>
                       {para}
                     </Typography>
                   ))}

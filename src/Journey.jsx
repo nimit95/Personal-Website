@@ -27,12 +27,59 @@ const useStyle = makeStyles(theme => ({
   button: {
     marginTop: theme.spacing(1),
     marginRight: theme.spacing(1),
+    background: theme.palette.hoverBackground,
+    color: theme.palette.primary.main,
   },
   actionsContainer: {
     marginBottom: theme.spacing(2),
   },
   resetContainer: {
     padding: theme.spacing(3),
+  },
+  stepper: {
+    backgroundColor: theme.palette.secondaryBackground,
+    color: theme.palette.primary.main,
+    border: '1px solid rgba(0, 0, 0, .125)',
+    boxShadow: 'none',
+    '&:not(:last-child)': {
+      borderBottom: 0,
+    },
+    "& $completed": {
+      color: "lightgreen"
+    },
+    "& $active": {
+      color: "pink"
+    },
+    "& $disabled": {
+      color: "red"
+    },
+    "& $label": {
+      color: "red"
+    },
+  },
+  stepperLabel: {
+    "&:span":{
+      color:theme.palette.primary.main,
+    },
+    "& $completed": {
+      color: "lightgreen"
+    },
+    "& $active": {
+      color: "pink"
+    },
+    "& $disabled": {
+      color: "red"
+    },
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: "300",
+  },
+  journeyDescription: {
+    color: theme.palette.primary.main,
+    textAlign: "justify",
+    fontSize: 14,
+    fontStyle: "thin",
+    fontWeight: "300",
   },
 }));
 
@@ -93,12 +140,12 @@ function Journey(props) {
           </Grid>
 
           <Grid item xs={11} style={{width:"100%"}}>
-            <Stepper activeStep={activeStep} orientation="vertical" >
+            <Stepper activeStep={activeStep} orientation="vertical" className={classes.stepper}>
               {steps.map((label, index) => (
-                <Step key={label}>
-                  <StepLabel>{label}</StepLabel>
+                <Step key={label} >
+                  <StepLabel color={"#66fcf1"} className={classes.stepperLabel}>{label}</StepLabel>
                   <StepContent>
-                    <Typography>{getStepContent(index)}</Typography>
+                    <Typography className={classes.journeyDescription}>{getStepContent(index)}</Typography>
                     <div className={classes.actionsContainer}>
                       <div>
                         <Button

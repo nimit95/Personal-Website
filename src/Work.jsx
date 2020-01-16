@@ -60,7 +60,7 @@ const useStyle = makeStyles(theme => ({
     fontSize: 17,
     color: theme.palette.primary.main
   },
-  description: {
+  projectDescription: {
     color: theme.palette.primary.main,
     textAlign: "justify",
     fontSize: 14,
@@ -95,12 +95,12 @@ function Work(props) {
         <Grid container spacing={1} className={classes.girdListContainer}>
           {data.blogData.map(exp => (
             <Grid item xs={4} style={{display: "flex"}}>
-              <Card className={classes.card} variant="outlined">
+              <Card className={classes.card} variant="outlined" onClick={() => {window.open(exp.link)}}>
                 <CardContent>
                   <Typography className={classes.projectName} gutterBottom>
                     {exp.name}
                   </Typography>
-                  <Typography variant="body2" component="p" className={classes.description}>
+                  <Typography variant="body2" component="p" className={classes.projectDescription}>
                     {exp.description}
                   </Typography>
                 </CardContent>
@@ -132,12 +132,12 @@ function Work(props) {
             <Grid container spacing={1} className={classes.girdListContainer}>
               {data.projectData.map(exp => (
                 <Grid item xs={4} style={{display: "flex"}}>
-                  <Card className={classes.card} variant="outlined">
+                  <Card className={classes.card} variant="outlined" onClick={() => {window.open(exp.link)}}>
                     <CardContent>
                       <Typography className={classes.projectName} gutterBottom>
                         {exp.name}
                       </Typography>
-                      <Typography variant="body2" component="p" className={classes.description}>
+                      <Typography variant="body2" component="p" className={classes.projectDescription}>
                         {exp.description}
                       </Typography>
                     </CardContent>
