@@ -8,12 +8,12 @@ import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
 
 const useStyle = makeStyles(theme => ({
   root: {
-    backgroundColor: "#1f2833",
+    backgroundColor: theme.palette.background,
     flexGrow: 1,
     height: "100%"
   },
   aboutTxt: {
-    color: "#e6f1ff",
+    color: theme.palette.primary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontSize: "18px",
@@ -28,7 +28,7 @@ const useStyle = makeStyles(theme => ({
     display: "block"
   },
   heading: {
-    color: "#66fcf1",
+    color: theme.palette.secondary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
