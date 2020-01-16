@@ -153,7 +153,7 @@ function Work(props) {
           </Grid>
         </Grid>
         <Grid item xs={0.5}> <AnimatedRightIcon onClick={() => {
-          props.history.push("/work")
+          props.history.push("/journey")
         }}/></Grid>
       </Grid>
     </div>
