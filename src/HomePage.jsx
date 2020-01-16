@@ -14,7 +14,7 @@ import Button from "@material-ui/core/Button";
 
 const useStyle = makeStyles(theme => ({
   root: {
-    backgroundColor: "#263238",
+    backgroundColor: theme.palette.background,
     flexGrow: 1,
     height: "100%"
   },
@@ -22,7 +22,7 @@ const useStyle = makeStyles(theme => ({
     align: "center"
   },
   introduction: {
-    color: "#e6f1ff",
+    color: theme.palette.primary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -30,7 +30,7 @@ const useStyle = makeStyles(theme => ({
     lineHeight: "24px"
   },
   name: {
-    color: "#66fcf1",
+    color: theme.palette.secondary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -38,7 +38,7 @@ const useStyle = makeStyles(theme => ({
     // lineHeight: "24px"
   },
   description: {
-    color: "#e6f1ff",
+    color: theme.palette.primary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -46,7 +46,7 @@ const useStyle = makeStyles(theme => ({
     // lineHeight: "40px"
   },
   favouriteText: {
-    color: "#e6f1ff",
+    color: theme.palette.secondary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -54,7 +54,7 @@ const useStyle = makeStyles(theme => ({
     fontSize: "46px",
   },
   favourite: {
-    color: "#66fcf1",
+    color: theme.palette.secondary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -74,7 +74,7 @@ const useStyle = makeStyles(theme => ({
     fontWeight: 300,
     fontSize: "16px",
 
-    color: "#66fcf1",
+    color:theme.palette.secondary.main,
   }
 }));
 
