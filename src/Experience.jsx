@@ -12,14 +12,14 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyle = makeStyles(theme => ({
   root: {
-    backgroundColor: "#1f2833",
+    backgroundColor: theme.palette.background,
     flexGrow: 1,
     height: "100%",
     width: "100%",
     paddingTop: theme.spacing(10)
   },
   pageName: {
-    color: "#66fcf1",
+    color: theme.palette.secondary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -28,16 +28,16 @@ const useStyle = makeStyles(theme => ({
   heading: {
     fontSize: theme.typography.pxToRem(15),
     flexBasis: '75%',
-    color: "#e6f1ff"
+    color: theme.palette.primary.main
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(15),
-    color: "#e6f1ff",
+    color: theme.palette.primary.main,
     flexBasis: '25%',
   },
   expansionPanel: {
-    backgroundColor: "#333f58",
-    color: "#e6f1ff",
+    backgroundColor: theme.palette.secondaryBackground,
+    color: theme.palette.primary.main,
     border: '1px solid rgba(0, 0, 0, .125)',
     boxShadow: 'none',
     '&:not(:last-child)': {
