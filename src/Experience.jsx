@@ -28,7 +28,10 @@ const useStyle = makeStyles(theme => ({
   heading: {
     fontSize: theme.typography.pxToRem(17),
     flexBasis: '75%',
-    color: theme.palette.primary.main
+    color: theme.palette.headingColor,
+    fontFamily: "Roboto",
+    fontStyle: "bold",
+    fontWeight: "900",
   },
   secondaryHeading: {
     fontSize: theme.typography.pxToRem(14),
@@ -68,6 +71,7 @@ const useStyle = makeStyles(theme => ({
   },
   expansionDetail: {
     flexDirection: "column",
+    color: theme.palette.primary.main,
   },
   experienceDescription: {
     color: theme.palette.primary.main,

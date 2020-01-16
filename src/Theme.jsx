@@ -21,6 +21,7 @@ const theme = createMuiTheme({
     behindBackground: blueGrey[600],
     // Used by `getContrastText()` to maximize the contrast between
     // the background and the text.
+    headingColor: "#ffffff",
     contrastThreshold: 3,
     // Used by the functions below to shift a color's luminance by approximately
     // two indexes within its tonal palette.
