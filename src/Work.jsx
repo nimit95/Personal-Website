@@ -20,14 +20,14 @@ import Feed from "rss-to-json"
 
 const useStyle = makeStyles(theme => ({
   root: {
-    backgroundColor: "#1f2833",
+    backgroundColor:  theme.palette.background,
     flexGrow: 1,
     height: "100%",
     width: "100%",
     paddingTop: theme.spacing(10)
   },
   pageName: {
-    color: "#66fcf1",
+    color: theme.palette.secondary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -37,9 +37,6 @@ const useStyle = makeStyles(theme => ({
     width: 500,
     height: 450,
   },
-  icon: {
-    color: 'rgba(255, 255, 255, 0.54)',
-  },
   girdListContainer: {
     display: 'flex',
     flexWrap: 'wrap',
@@ -47,9 +44,9 @@ const useStyle = makeStyles(theme => ({
     overflow: 'hidden',
   },
   card: {
-    backgroundColor: "#333f58",
+    backgroundColor: theme.palette.secondaryBackground,
     width: "100%",
-    "&:hover": {background: "#45a29e", cursor: "pointer"},
+    "&:hover": {background: theme.palette.hoverBackground, cursor: "pointer"},
     display: 'flex',
     justifyContent: 'space-between',
     flexDirection: 'column'
@@ -61,10 +58,10 @@ const useStyle = makeStyles(theme => ({
   },
   projectName: {
     fontSize: 17,
-    color: "#e6f1ff"
+    color: theme.palette.primary.main
   },
   description: {
-    color: "#e6f1ff",
+    color: theme.palette.primary.main,
     textAlign: "justify",
     fontSize: 14,
     fontStyle: "thin",
@@ -75,7 +72,7 @@ const useStyle = makeStyles(theme => ({
   },
 
   blogHeading: {
-    color: "#66fcf1",
+    color: theme.palette.secondary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
