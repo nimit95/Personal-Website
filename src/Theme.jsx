@@ -1,9 +1,10 @@
 import {createMuiTheme} from '@material-ui/core/styles';
+import blueGrey from '@material-ui/core/colors/blueGrey';
 
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#eceff1',
+      main: blueGrey[50],
     },
     secondary: {
       light: '#0066ff',
@@ -11,7 +12,9 @@ const theme = createMuiTheme({
       // dark: will be calculated from palette.secondary.main,
       contrastText: '#ffcc00',
     },
-    background: "#263238",
+    background: blueGrey[900],
+    appBarBackground: blueGrey[900],
+    drawerBackground: blueGrey[900],
     // Used by `getContrastText()` to maximize the contrast between
     // the background and the text.
     contrastThreshold: 3,
