@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Paper from '@material-ui/core/Paper'
+import Grid from '@material-ui/core/Grid'
 import SideDrawer from "./SideDrawer"
 import MainContent from "./MainContent";
 import Router from './Router'
@@ -28,7 +28,8 @@ const useStyle = makeStyles(theme => ({
   },
   toolbar: {
     ...theme.mixins.toolbar,
-  }
+  },
+
 }));
 
 function PersonalWebsite() {
@@ -46,7 +47,10 @@ function PersonalWebsite() {
         <Router className={classes.root}/>
       </div>
     </div>
-  );
+
+
+  )
+    ;
 }
 
 
