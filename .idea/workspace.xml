@@ -6,7 +6,6 @@
       <change beforePath="$PROJECT_DIR$/src/Journey.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Journey.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PersonalWebsite.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/PersonalWebsite.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Theme.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/config/config.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/config/config.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +98,7 @@
       <workItem from="1578732611382" duration="11071000" />
       <workItem from="1578766708845" duration="20825000" />
       <workItem from="1578842618095" duration="30753000" />
-      <workItem from="1579022324183" duration="35496000" />
+      <workItem from="1579022324183" duration="36290000" />
     </task>
     <servers />
   </component>

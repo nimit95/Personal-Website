@@ -37,6 +37,7 @@ const useStyle = makeStyles(theme => ({
   },
   resetContainer: {
     padding: theme.spacing(3),
+    color: theme.palette.primary.main,
   },
   stepper: {
     backgroundColor: theme.palette.secondaryBackground,
@@ -60,20 +61,17 @@ const useStyle = makeStyles(theme => ({
     },
   },
   stepperLabel: {
-    "&:span": {
-      color: theme.palette.primary.main,
+    "& .MuiStepLabel-active": {
+      color:  theme.palette.primary.main,
     },
-    "&$completed": {
-      color: theme.palette.primary.main,
-      textColor: theme.palette.primary.main,
+    "& .MuiStepLabel-completed": {
+      color:  theme.palette.primary.main,
     },
-    "&$active": {
-      color: theme.palette.primary.main,
-      textColor: theme.palette.primary.main,
+    "&.Mui-disabled .MuiStepLabel-label": {
+      color:  theme.palette.primary.main,
     },
-    "&$disabled": {
-      color: theme.palette.primary.main,
-      textColor: theme.palette.primary.main,
+    "&.MuiStepIcon-root": {
+      color:  theme.palette.primary.main,
     },
     color: theme.palette.primary.main,
     fontFamily: "Roboto",
@@ -138,7 +136,7 @@ function Journey(props) {
             <Stepper activeStep={activeStep} orientation="vertical" className={classes.stepper}>
               {steps.map((label, index) => (
                 <Step key={label}>
-                  <StepLabel>{label}</StepLabel>
+                  <StepLabel className={classes.stepperLabel}>{label}</StepLabel>
                   <StepContent>
                     <Typography className={classes.journeyDescription}>{getStepContent(index)}</Typography>
                     <div className={classes.actionsContainer}>
