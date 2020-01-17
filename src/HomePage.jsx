@@ -10,6 +10,7 @@ import AnimatedFavoriteIcon from './Animations/AnimatedFavoriteIcon'
 import {useHistory} from "react-router-dom";
 import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
 import Button from "@material-ui/core/Button";
+import ListItem from "@material-ui/core/ListItem";
 
 
 const useStyle = makeStyles(theme => ({
@@ -129,7 +130,7 @@ function HomePage(props) {
             </Typography>
           </Grid>
           <Grid item xs={6}>
-            <Button variant="outlined" className={classes.getInTouchButton} onClick={() => history.push("/contact")}>
+            <Button variant="outlined" className={classes.getInTouchButton} component="a" href={`mailto:${data.email}?Subject=Hello`} target="_top">
               Get in Touch!
             </Button>
           </Grid>

@@ -81,9 +81,9 @@ function Navbar(props) {
                 <NavLink to="/journey" activeStyle={activeStyle}>
                   04. Journey
                 </NavLink>
-                <NavLink to="/contact" activeStyle={activeStyle}>
-                  05. Contact
-                </NavLink>
+                {/*<NavLink to="/contact" activeStyle={activeStyle}>*/}
+                {/*  05. Contact*/}
+                {/*</NavLink>*/}
                 <Button variant="outlined" className={classes.navButton}>
                   Resume
                 </Button>

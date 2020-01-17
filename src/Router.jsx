@@ -42,7 +42,7 @@ function Router() {
         <Route exact path="/experience" render={(props) => <Experience {...props}/>}/>
         <Route exact path="/work" render={(props) => <Work {...props}/>}/>
         <Route exact path="/journey" render={(props) => <Journey {...props}/>}/>
-        <Route exact path="/contact" render={(props) => <Contact {...props}/>}/>
+        {/*<Route exact path="/contact" render={(props) => <Contact {...props}/>}/>*/}
       </Switch>
     </animated.div>
   )): transitions2.map(({ item: location, props, key }) => (
@@ -53,7 +53,7 @@ function Router() {
         <Route exact path="/experience" render={(props) => <Experience {...props}/>}/>
         <Route exact path="/work" render={(props) => <Work {...props}/>}/>
         <Route exact path="/journey" render={(props) => <Journey {...props}/>}/>
-        <Route exact path="/contact" render={(props) => <Contact {...props}/>}/>
+        {/*<Route exact path="/contact" render={(props) => <Contact {...props}/>}/>*/}
         {/*<Route path="/" render={(props) => <Contact {...props}/>}/>*/}
       </Switch>
     </animated.div>

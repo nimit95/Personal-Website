@@ -172,9 +172,9 @@ function Journey(props) {
             )}
           </Grid>
         </Grid>
-        <Grid item xs={1}> <AnimatedRightIcon onClick={() => {
-          props.history.push("/contact")
-        }}/></Grid>
+        {/*<Grid item xs={1}> <AnimatedRightIcon onClick={() => {*/}
+        {/*  props.history.push("/contact")*/}
+        {/*}}/></Grid>*/}
       </Grid>
     </div>
   )
