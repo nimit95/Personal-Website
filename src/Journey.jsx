@@ -10,19 +10,21 @@ import StepContent from '@material-ui/core/StepContent';
 import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+import data from './config/config';
 
 const useStyle = makeStyles(theme => ({
   root: {
-    backgroundColor: "#1f2833",
+    backgroundColor: theme.palette.background,
     flexGrow: 1,
     height: "100%"
   },
   pageName: {
-    color: "#66fcf1",
+    color: theme.palette.secondary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
     fontSize: "30px",
+    marginTop: "40px"
   },
   button: {
     marginTop: theme.spacing(1),
@@ -44,10 +46,10 @@ const useStyle = makeStyles(theme => ({
     '&:not(:last-child)': {
       borderBottom: 0,
     },
-    "& $completed": {
+    "&$completed": {
       color: "lightgreen"
     },
-    "& $active": {
+    "&$active": {
       color: "pink"
     },
     "& $disabled": {
@@ -58,18 +60,22 @@ const useStyle = makeStyles(theme => ({
     },
   },
   stepperLabel: {
-    "&:span":{
-      color:theme.palette.primary.main,
+    "&:span": {
+      color: theme.palette.primary.main,
     },
-    "& $completed": {
-      color: "lightgreen"
+    "&$completed": {
+      color: theme.palette.primary.main,
+      textColor: theme.palette.primary.main,
     },
-    "& $active": {
-      color: "pink"
+    "&$active": {
+      color: theme.palette.primary.main,
+      textColor: theme.palette.primary.main,
     },
-    "& $disabled": {
-      color: "red"
+    "&$disabled": {
+      color: theme.palette.primary.main,
+      textColor: theme.palette.primary.main,
     },
+    color: theme.palette.primary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
@@ -84,25 +90,14 @@ const useStyle = makeStyles(theme => ({
 }));
 
 function getSteps() {
-  return ['Select campaign settings', 'Create an ad group', 'Create an ad'];
+  return data.journeySteps.map(journey => journey.heading);
 }
 
 function getStepContent(step) {
-  switch (step) {
-    case 0:
-      return `For each ad campaign that you create, you can control how much
-              you're willing to spend on clicks and conversions, which networks
-              and geographical locations you want your ads to show on, and more.`;
-    case 1:
-      return 'An ad group contains one or more ads which target a shared set of keywords.';
-    case 2:
-      return `Try out different ad text to see what brings in the most customers,
-              and learn how to enhance your ads using features like ad extensions.
-              If you run into any problems with your ads, find out how to tell if
-              they're running and how to resolve approval issues.`;
-    default:
-      return 'Unknown step';
+  if (step < data.journeySteps.length) {
+    return data.journeySteps[step].description
   }
+  return 'Unknown step';
 }
 
 
@@ -139,11 +134,11 @@ function Journey(props) {
             </Typography>
           </Grid>
 
-          <Grid item xs={11} style={{width:"100%"}}>
+          <Grid item xs={11} style={{width: "100%"}}>
             <Stepper activeStep={activeStep} orientation="vertical" className={classes.stepper}>
               {steps.map((label, index) => (
-                <Step key={label} >
-                  <StepLabel color={"#66fcf1"} className={classes.stepperLabel}>{label}</StepLabel>
+                <Step key={label}>
+                  <StepLabel>{label}</StepLabel>
                   <StepContent>
                     <Typography className={classes.journeyDescription}>{getStepContent(index)}</Typography>
                     <div className={classes.actionsContainer}>
@@ -171,7 +166,7 @@ function Journey(props) {
             </Stepper>
             {activeStep === steps.length && (
               <Paper square elevation={0} className={classes.resetContainer}>
-                <Typography>All steps completed - you&apos;re finished</Typography>
+                <Typography>Journey completed - Present - you&apos;re finished</Typography>
                 <Button onClick={handleReset} className={classes.button}>
                   Reset
                 </Button>

@@ -95,8 +95,6 @@
       "description": "C++ header for Data structure",
       "link": "https://github.com/nimit95/cpp-header"
     }
-
-
   ],
   "blogData": [
     {
@@ -118,6 +116,42 @@
       "name": "A Simple HTTP/HTTPS Proxy in Node Js",
       "description": "What is Proxy then making one in Node.js",
       "link": "https://medium.com/@nimit95/a-simple-http-https-proxy-in-node-js-4eb0444f38fc?source=your_stories_page---------------------------"
+    }
+  ],
+  "journeySteps": [
+    {
+      "heading": "2014 college freshman year and C++",
+      "description": "Freshman year of college in Computer Science at MAIT, Delhi. Began with basics of C++. Started doing some questions online as well. But nothing Serioud"
+    },
+    {
+      "heading": "Learned Android",
+      "description": "There was a big learning curve here. I directly started with Android so had to cope with Learning Java as well. Had got comfortable in C++ though"
+    },
+    {
+      "heading": "Google and Udacity Scholarship",
+      "description": "Had applied for it, and was actually able to clear the test and the interview. Passionately followed Android and Completed Android Developer NanoDegree",
+      "link": ""
+    },
+    {
+      "heading": "Some Internships",
+      "description": "After completing the Nanodegree I did couple of internships in Android. Then followed it up with Teaching Assistant @Coding Blocks in Algo++. Course for advanced Data Structure and Algorithms"
+    },
+    {
+      "heading": "Learned Node.JS!",
+      "description": "After mobile development it was time to move into the world of web. I started with Node and really loved this runtime version of JS."
+    },
+    {
+      "heading": "Completed College 2018 and Joined BrowserStack!",
+      "description": "Finally got my bachelors degree with 78%. Just after graduating I joined BrowserStack as Software Engineer. Also shifted to Mumbai for the job"
+    },
+    {
+      "heading": "Google Certified Mobile Web Specialist",
+      "description": "While working I was able to squeeze enough time to Complete Mobile Web Specialist Nanodegree and then go ahead and also get a Google Certification for the same. This all hone me improve my frontend skills.",
+      "link": ""
+    },
+    {
+      "heading": "Learned ReactJS and made this",
+      "description": ""
     }
   ]
 }

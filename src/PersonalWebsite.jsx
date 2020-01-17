@@ -9,7 +9,7 @@ import theme from './Theme'
 import {ThemeProvider} from '@material-ui/core/styles';
 
 /**
- * TODO: like button, journey, personal corner, certification, resume, contact, central theme colours, bottom github made. Add 404 page, image fix, ,exprience color fix, github button in card
+ * TODO: like button, journey, personal corner, certification, resume, contact, bottom github made. Add 404 page, image fix, github button in card, tech display in about, experience content fix, grammarly on config json
  * @type {StylesHook<Styles<Theme, {}, string>>}
  */
 const useStyle = makeStyles(theme => ({
