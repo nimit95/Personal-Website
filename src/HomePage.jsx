@@ -10,7 +10,7 @@ import AnimatedFavoriteIcon from './Animations/AnimatedFavoriteIcon'
 import {useHistory} from "react-router-dom";
 import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
 import Button from "@material-ui/core/Button";
-import ListItem from "@material-ui/core/ListItem";
+import Link from "@material-ui/core/Link";
 import Hidden from '@material-ui/core/Hidden';
 
 
@@ -28,8 +28,13 @@ const useStyle = makeStyles(theme => ({
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
-    fontSize: "36px",
-    lineHeight: "24px",
+    fontSize: theme.typography.pxToRem(36),
+    lineHeight: theme.typography.pxToRem(24),
+    [theme.breakpoints.down('md')]: {
+      fontSize: theme.typography.pxToRem(24),
+      lineHeight: theme.typography.pxToRem(16),
+    },
+
     textAlign: "center"
   },
   name: {
@@ -37,16 +42,23 @@ const useStyle = makeStyles(theme => ({
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
-    fontSize: "48px",
-    textAlign: "center"
+    fontSize: theme.typography.pxToRem(48),
+    textAlign: "center",
+    [theme.breakpoints.down('md')]: {
+      fontSize: theme.typography.pxToRem(32),
+    },
     // lineHeight: "24px"
+
   },
   description: {
     color: theme.palette.primary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
-    fontSize: "30px",
+    fontSize: theme.typography.pxToRem(30),
+    [theme.breakpoints.down('md')]: {
+      fontSize: theme.typography.pxToRem(20),
+    },
     textAlign: "center"
     // lineHeight: "40px"
   },
@@ -56,14 +68,20 @@ const useStyle = makeStyles(theme => ({
     fontStyle: "normal",
     fontWeight: "300",
     marginTop: theme.spacing(10),
-    fontSize: "46px",
+    fontSize: theme.typography.pxToRem(48),
+    [theme.breakpoints.down('md')]: {
+      fontSize: theme.typography.pxToRem(32),
+    },
   },
   favourite: {
     color: theme.palette.secondary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
-    fontSize: "30px",
+    fontSize: theme.typography.pxToRem(30),
+    [theme.breakpoints.down('md')]: {
+      fontSize: theme.typography.pxToRem(20),
+    },
   },
   pageContent: {
     paddingTop: theme.spacing(10),
@@ -77,9 +95,23 @@ const useStyle = makeStyles(theme => ({
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: 300,
-    fontSize: "16px",
-
+    textAlign: "center",
+    fontSize: theme.typography.pxToRem(15),
+    [theme.breakpoints.down('md')]: {
+      fontSize: theme.typography.pxToRem(15),
+    },
     color:theme.palette.secondary.main,
+  },
+  knowMoreLink: {
+    fontSize: theme.typography.pxToRem(18),
+    border: "1px solid #e6f1ff",
+    textAlign: "center",
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: 300,
+    marginTop: theme.spacing(10),
+    padding: theme.spacing(1, 1.5),
+    textDecoration: 'none',
   }
 }));
 
@@ -101,7 +133,8 @@ function HomePage(props) {
         <Grid
           container
           item
-          xs={10}
+          md={10}
+          sm={12}
           spacing={0}
           direction="column"
           alignItems="center"
@@ -135,6 +168,16 @@ function HomePage(props) {
               <AnimateText text={data.favourite}/>
             </Typography>
           </Grid>
+
+          <Hidden only="sm">
+            <Grid item xs={6} className={classes.knowMoreLink}>
+              <Link color="primary" href="/about">
+                Know More!
+              </Link>
+            </Grid>
+          </Hidden>
+
+
           <Grid item xs={6}>
             <Button variant="outlined" className={classes.getInTouchButton} component="a" href={`mailto:${data.email}?Subject=Hello`} target="_top">
               Get in Touch!

@@ -42,8 +42,8 @@ function PersonalWebsite() {
 
       <Navbar/>
 
-      <Hidden smDown>
-      <SideDrawer/>
+      <Hidden xsDown>
+        <SideDrawer/>
       </Hidden>
 
       <div className={classes.content}>
