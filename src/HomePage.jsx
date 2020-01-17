@@ -100,7 +100,7 @@ const useStyle = makeStyles(theme => ({
     [theme.breakpoints.down('md')]: {
       fontSize: theme.typography.pxToRem(15),
     },
-    color:theme.palette.secondary.main,
+    color: theme.palette.secondary.main,
   },
   knowMoreLink: {
     fontSize: theme.typography.pxToRem(18),
@@ -126,9 +126,9 @@ function HomePage(props) {
     <div className={`${classes.root}`}>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{height: "100%"}}>
         <Hidden smDown>
-        <Grid item xs={0.5}>
-          <AnimatedLeftIcon disabled/>
-        </Grid>
+          <Grid item xs={0.5}>
+            <AnimatedLeftIcon disabled/>
+          </Grid>
         </Hidden>
         <Grid
           container
@@ -179,16 +179,17 @@ function HomePage(props) {
 
 
           <Grid item xs={6}>
-            <Button variant="outlined" className={classes.getInTouchButton} component="a" href={`mailto:${data.email}?Subject=Hello`} target="_top">
+            <Button variant="outlined" className={classes.getInTouchButton} component="a"
+                    href={`mailto:${data.email}?Subject=Hello`} target="_top">
               Get in Touch!
             </Button>
           </Grid>
         </Grid>
         <Grid item>
           <Hidden smDown>
-          <AnimatedRightIcon onClick={() => {
-            history.push("/about")
-          }}/>
+            <AnimatedRightIcon onClick={() => {
+              history.push("/about")
+            }}/>
           </Hidden>
         </Grid>
       </Grid>
