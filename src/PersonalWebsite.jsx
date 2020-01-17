@@ -7,9 +7,11 @@ import Router from './Router'
 import {makeStyles, CssBaseline} from "@material-ui/core";
 import theme from './Theme'
 import {ThemeProvider} from '@material-ui/core/styles';
+import Hidden from "@material-ui/core/Hidden";
+
 
 /**
- * TODO: resume, experience content fix, image fix, like button, journey, Add 404 page, , tech display in about, , grammarly on config json, cleanup
+ * TODO: resume, experience content fix, image fix, write readme,like button, journey, Add 404 page, , tech display in about, , grammarly on config json, cleanup
  *
  * TODO long term - contact page with form, github button in card
  * @type {StylesHook<Styles<Theme, {}, string>>}
@@ -40,7 +42,9 @@ function PersonalWebsite() {
 
       <Navbar/>
 
+      <Hidden smDown>
       <SideDrawer/>
+      </Hidden>
 
       <div className={classes.content}>
         {/*<div className={classes.toolbar}/>*/}

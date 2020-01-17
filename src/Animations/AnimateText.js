@@ -40,7 +40,7 @@ function AnimateText({text}) {
 
   return transition.map(({item, key, state, props, phase}) => {
     console.log(item, key, state, props, phase, text[item], phase === "enter") ;
-    return (phase === "enter") && <animated.span style={props} key={key}>{item}</animated.span>
+    return (phase === "enter") && <animated.span style={{...props, textAlign:"center"}} key={key}>{item}</animated.span>
   });
 }
 export default AnimateText;

@@ -11,6 +11,7 @@ import {useHistory} from "react-router-dom";
 import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
 import Button from "@material-ui/core/Button";
 import ListItem from "@material-ui/core/ListItem";
+import Hidden from '@material-ui/core/Hidden';
 
 
 const useStyle = makeStyles(theme => ({
@@ -28,7 +29,8 @@ const useStyle = makeStyles(theme => ({
     fontStyle: "normal",
     fontWeight: "300",
     fontSize: "36px",
-    lineHeight: "24px"
+    lineHeight: "24px",
+    textAlign: "center"
   },
   name: {
     color: theme.palette.secondary.main,
@@ -36,6 +38,7 @@ const useStyle = makeStyles(theme => ({
     fontStyle: "normal",
     fontWeight: "300",
     fontSize: "48px",
+    textAlign: "center"
     // lineHeight: "24px"
   },
   description: {
@@ -44,6 +47,7 @@ const useStyle = makeStyles(theme => ({
     fontStyle: "normal",
     fontWeight: "300",
     fontSize: "30px",
+    textAlign: "center"
     // lineHeight: "40px"
   },
   favouriteText: {
@@ -89,9 +93,11 @@ function HomePage(props) {
     // <div className={classes.root}>
     <div className={`${classes.root}`}>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{height: "100%"}}>
+        <Hidden smDown>
         <Grid item xs={0.5}>
           <AnimatedLeftIcon disabled/>
         </Grid>
+        </Hidden>
         <Grid
           container
           item
@@ -136,9 +142,11 @@ function HomePage(props) {
           </Grid>
         </Grid>
         <Grid item>
+          <Hidden smDown>
           <AnimatedRightIcon onClick={() => {
             history.push("/about")
           }}/>
+          </Hidden>
         </Grid>
       </Grid>
     </div>

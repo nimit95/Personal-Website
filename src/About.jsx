@@ -4,6 +4,7 @@ import Typography from "@material-ui/core/Typography";
 import data from "./config/config";
 import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
 import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
+import Hidden from "@material-ui/core/Hidden";
 
 
 const useStyle = makeStyles(theme => ({
@@ -41,11 +42,14 @@ function About(props) {
   return (
     <div className={classes.root}>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{height:"100%"}}>
+        <Hidden mdDown>
         <Grid item xs={0.5}>
+
           <AnimatedLeftIcon onClick={() => {
             props.history.replace("/?back")
           }}/>
         </Grid>
+      </Hidden>
 
         <Grid container item xs={10} alignItems="center" justify="space-evenly" direction="row">
           <Grid item>
@@ -66,9 +70,10 @@ function About(props) {
             })}
           </Grid>
         </Grid>
+        <Hidden mdDown>
         <Grid item xs={0.5}> <AnimatedRightIcon onClick={() => {
           props.history.push("/experience")
-        }}/></Grid>
+        }}/></Grid></Hidden>
       </Grid>
     </div>
   )
