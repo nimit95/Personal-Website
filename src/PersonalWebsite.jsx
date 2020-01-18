@@ -7,7 +7,7 @@ import Hidden from "@material-ui/core/Hidden";
 
 
 /**
- * TODO: resume, experience content fix, image fix, write readme,like button, journey, Add 404 page, , tech display in about, , grammarly on config json, cleanup, gs
+ * TODO: resume, experience content fix,  write readme,like button, Add 404 page, , tech display in about, , grammarly on config json, cleanup, gs, know moew button, footer
  *
  * TODO long term - contact page with form, github button in card
  * @type {StylesHook<Styles<Theme, {}, string>>}
