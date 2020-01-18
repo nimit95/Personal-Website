@@ -1,7 +1,12 @@
 
-## nimitaggarwal.com
-This is my Personal Website built with ReactJS using Material-UI and React Spring for Animations.
+<h1 align="center">
+  nimitaggarwal.com
+</h1>
+<p align="center">
+  This is my Personal Website <a href="https://nimitaggarwal.com" target="_blank">nimitaggarwal.com</a> built with <a href="https://www.reactjs.org/" target="_blank">React</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+</p>
 
+For UI it uses 
 All the data is controlled by the config.json in folder src/config/
 <hr/>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

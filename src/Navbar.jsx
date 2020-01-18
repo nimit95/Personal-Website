@@ -143,7 +143,7 @@ function Navbar(props) {
                     <MenuItem onClick={handleClose} component={Link} to="/experience">Experience</MenuItem>
                     <MenuItem onClick={handleClose} component={Link} to="/work">Work</MenuItem>
                     <MenuItem onClick={handleClose} component={Link} to="/journey">Journey</MenuItem>
-                    <MenuItem onClick={handleClose} component={Link} href={data.resumeUrl}>Resume</MenuItem>
+                    <MenuItem onClick={handleClose} component="a" href={data.resumeUrl}>Resume</MenuItem>
                   </Menu>
                 </Hidden>
               </nav>
