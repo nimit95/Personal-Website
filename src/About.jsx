@@ -1,5 +1,5 @@
 import React from "react"
-import {Container, makeStyles, Grid, Card, CardContent} from "@material-ui/core";
+import { makeStyles, Grid } from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import data from "./config/config";
 import AnimatedRightIcon from "./Animations/AnimatedRightIcon";

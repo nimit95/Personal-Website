@@ -1,12 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Grid from '@material-ui/core/Grid'
 import SideDrawer from "./SideDrawer"
-import MainContent from "./MainContent";
 import Router from './Router'
 import {makeStyles, CssBaseline} from "@material-ui/core";
-import theme from './Theme'
-import {ThemeProvider} from '@material-ui/core/styles';
 import Hidden from "@material-ui/core/Hidden";
 
 

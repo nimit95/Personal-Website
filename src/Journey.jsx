@@ -2,7 +2,6 @@ import React from "react";
 import {Grid, makeStyles} from "@material-ui/core";
 import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
 import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
-
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
