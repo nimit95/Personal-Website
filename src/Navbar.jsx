@@ -66,9 +66,14 @@ const useStyles = makeStyles(theme => ({
   },
   activeStyle: {},
   menu: {
-    color: theme.palette.secondary.main,
+    // color: theme.palette.secondary.main,
+
+    // background: theme.palette.appBarBackground,
     "& *": {
       color: theme.palette.secondary.main,
+      fontStyle: "bold",
+      fontWeight: "bold"
+      // opacity: 0.25,
     }
   }
 }));
