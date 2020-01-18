@@ -13,7 +13,7 @@ function App() {
     ReactGA.initialize(data.ga);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <ThemeProvider theme={theme}>
         <PersonalWebsite/>
       </ThemeProvider>

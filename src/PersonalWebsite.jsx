@@ -8,7 +8,7 @@ import Footer from "./Footer";
 
 
 /**
- * TODO:  write readme, tech display in about,
+ * TODO:  write readme
  *
  * TODO long term - contact page with form, github button in card, Add 404 page, like button, errors fix,
  * @type {StylesHook<Styles<Theme, {}, string>>}

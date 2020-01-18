@@ -1,6 +1,7 @@
 {
   "name": "personal-website",
   "version": "0.1.0",
+  "homepage": "https://nimit95.github.io/Personal-Website",
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.8.3",
@@ -22,7 +23,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -38,5 +41,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^2.2.0"
   }
 }
