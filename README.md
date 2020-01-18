@@ -5,8 +5,7 @@
 <p align="center">
   This is my Personal Website <a href="https://nimitaggarwal.com" target="_blank">nimitaggarwal.com</a> built with <a href="https://www.reactjs.org/" target="_blank">React</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
-
-For UI it uses 
+<p>It uses <a href="https://material-ui.com/" target="_blank">Material UI</a> for the Design Style. Design PDF was created in figma and the design </p>
 All the data is controlled by the config.json in folder src/config/
 <hr/>
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
