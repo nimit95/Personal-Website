@@ -5,9 +5,21 @@
 <p align="center">
   This is my Personal Website <a href="https://nimitaggarwal.com" target="_blank">nimitaggarwal.com</a> built with <a href="https://www.reactjs.org/" target="_blank">React</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
-<p>It uses <a href="https://material-ui.com/" target="_blank">Material UI</a> for the Design Style. Design PDF was created in figma and the design </p>
+<p align="center">
+It uses <a href="https://material-ui.com/" target="_blank">Material UI</a> for the Design Style. Design was created using <a href="https://figma.com/" target="_blank">figma</a> and the design files are <a href="https://github.com/nimit95/Personal-Website/blob/master/nimitaggarwal.fig">here</a> and pdf file <a href="https://github.com/nimit95/Personal-Website/blob/master/nimitaggarwal.com.pdf">here</a>
+</p>
+
+<p align="center">
+  <a href="https://app.netlify.com/sites/nimit95/deploys" target="_blank">
+    <img src="https://api.netlify.com/api/v1/badges/cce3a254-ac43-41f7-bbe9-6421c90a2dd0/deploy-status" alt="Netlify Status" />
+  </a>
+</p>
+
+
 All the data is controlled by the config.json in folder src/config/
 <hr/>
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
