@@ -18,7 +18,9 @@ const useStyle = makeStyles(theme => ({
     padding: "0",
     margin: "0",
     display: "flex",
-    flexDirection: 'column',
+    [theme.breakpoints.down('xs')]: {
+      flexDirection: 'column',
+    },
   },
   content: {
     flexGrow: 1,

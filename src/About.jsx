@@ -6,10 +6,6 @@ import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
 import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
 import Hidden from "@material-ui/core/Hidden";
 import Link from "@material-ui/core/Link";
-import List from "@material-ui/core/Link";
-import ListItem from "@material-ui/core/Link";
-import ListItemText from "@material-ui/core/Link";
-
 
 const useStyle = makeStyles(theme => ({
   root: {
