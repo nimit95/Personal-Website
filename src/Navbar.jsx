@@ -6,6 +6,7 @@ import Button from '@material-ui/core/Button';
 import Drawer from "@material-ui/core/Drawer";
 
 import {NavLink} from "react-router-dom";
+import {Hidden} from "@material-ui/core";
 
 
 const useStyles = makeStyles(theme => ({
@@ -67,6 +68,7 @@ function Navbar(props) {
         <div className={classes.toolbarDiv}>
           <Grid container direction="row" justify="flex-end" alignItems="center">
             <Grid item >
+              <Hidden xsDown>
               <nav className={classes.toolbarTitle}>
                 <NavLink exact to="/about" activeStyle={activeStyle}>
                   01. About
@@ -87,6 +89,7 @@ function Navbar(props) {
                   Resume
                 </Button>
               </nav>
+              </Hidden>
             </Grid>
           </Grid>
           {/* <Button href="#" variant="outlined">

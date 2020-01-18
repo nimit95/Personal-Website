@@ -17,13 +17,13 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Feed from "rss-to-json"
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyle = makeStyles(theme => ({
   root: {
-    backgroundColor:  theme.palette.background,
+    backgroundColor: theme.palette.background,
     flexGrow: 1,
-    height: "100%",
-    width: "100%",
+    minHeight: "100vh",
     paddingTop: theme.spacing(10)
   },
   pageName: {
@@ -32,6 +32,9 @@ const useStyle = makeStyles(theme => ({
     fontStyle: "normal",
     fontWeight: "300",
     fontSize: "30px",
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: "10px",
+    },
   },
   gridList: {
     width: 500,
@@ -42,6 +45,9 @@ const useStyle = makeStyles(theme => ({
     flexWrap: 'wrap',
     justifyContent: 'flex-start',
     overflow: 'hidden',
+    [theme.breakpoints.down('xs')]: {
+     padding: "20px"
+    },
   },
   card: {
     backgroundColor: theme.palette.secondaryBackground,
@@ -94,8 +100,10 @@ function Work(props) {
         </Typography>
         <Grid container spacing={1} className={classes.girdListContainer}>
           {data.blogData.map(exp => (
-            <Grid item xs={4} style={{display: "flex"}}>
-              <Card className={classes.card} variant="outlined" onClick={() => {window.open(exp.link)}}>
+            <Grid item md={4} sm={6} xs={12} style={{display: "flex"}}>
+              <Card className={classes.card} variant="outlined" onClick={() => {
+                window.open(exp.link)
+              }}>
                 <CardContent>
                   <Typography className={classes.projectName} gutterBottom>
                     {exp.name}
@@ -118,12 +126,14 @@ function Work(props) {
   return (
     <div className={classes.root}>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{height: "100%"}}>
-        <Grid item xs={0.5}>
-          <AnimatedLeftIcon onClick={() => {
-            props.history.replace("/experience?back")
-          }}/>
-        </Grid>
-        <Grid container item xs={10} alignItems="stretch" justify="center" direction="column"
+        <Hidden xsDown>
+          <Grid item xs={0.5}>
+            <AnimatedLeftIcon onClick={() => {
+              props.history.replace("/experience?back")
+            }}/>
+          </Grid>
+        </Hidden>
+        <Grid container item lg={10} sm={8} xs={12} alignItems="stretch" justify="center" direction="column"
               style={{textAlign: "center"}}>
           <Grid item>
             <Typography variant="h3" gutterBottom className={classes.pageName} alignItems="center" justify="center">
@@ -131,8 +141,10 @@ function Work(props) {
             </Typography>
             <Grid container spacing={1} className={classes.girdListContainer}>
               {data.projectData.map(exp => (
-                <Grid item xs={4} style={{display: "flex"}}>
-                  <Card className={classes.card} variant="outlined" onClick={() => {window.open(exp.link)}}>
+                <Grid item md={4} sm={6} xs={12} style={{display: "flex"}}>
+                  <Card className={classes.card} variant="outlined" onClick={() => {
+                    window.open(exp.link)
+                  }}>
                     <CardContent>
                       <Typography className={classes.projectName} gutterBottom>
                         {exp.name}
@@ -152,9 +164,12 @@ function Work(props) {
             {data.blogData && data.blogData.length > 0 && getBlogWork()}
           </Grid>
         </Grid>
-        <Grid item xs={0.5}> <AnimatedRightIcon onClick={() => {
-          props.history.push("/journey")
-        }}/></Grid>
+        <Hidden xsDown>
+          <Grid item xs={0.5}> <AnimatedRightIcon onClick={() => {
+            props.history.push("/journey")
+          }}/>
+          </Grid>
+        </Hidden>
       </Grid>
     </div>
   )
