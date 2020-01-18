@@ -10,7 +10,6 @@ import {NavLink} from "react-router-dom";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "100%",
     marginBottom: '0'
   },
   appBar: {

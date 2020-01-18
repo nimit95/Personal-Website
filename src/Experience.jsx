@@ -9,13 +9,13 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyle = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background,
     flexGrow: 1,
-    height: "100%",
-    width: "100%",
+    minHeight: "100vh",
     paddingTop: theme.spacing(10)
   },
   pageName: {
@@ -24,9 +24,15 @@ const useStyle = makeStyles(theme => ({
     fontStyle: "normal",
     fontWeight: "300",
     fontSize: "30px",
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: "10px",
+    },
   },
   heading: {
     fontSize: theme.typography.pxToRem(17),
+    [theme.breakpoints.down('xs')]: {
+      flexBasis: '50%',
+    },
     flexBasis: '75%',
     color: theme.palette.headingColor,
     fontFamily: "Roboto",
@@ -38,6 +44,9 @@ const useStyle = makeStyles(theme => ({
     color: theme.palette.primary.main,
     fontStyle: "italic",
     flexBasis: '25%',
+    [theme.breakpoints.down('xs')]: {
+      flexBasis: '50%',
+    },
   },
   expansionPanel: {
     backgroundColor: theme.palette.secondaryBackground,
@@ -79,6 +88,11 @@ const useStyle = makeStyles(theme => ({
     fontSize: 14,
     fontStyle: "thin",
     fontWeight: "300",
+  },
+  expansionContent: {
+    [theme.breakpoints.down('xs')]: {
+      padding: "15px",
+    },
   }
 }));
 
@@ -94,33 +108,40 @@ function Experience(props) {
   return (
     <div className={classes.root}>
 
-      <Grid container direction="row" justify="space-between" alignItems="center" style={{height: "100%"}}>
-        <Grid item xs={0.5}>
-          <AnimatedLeftIcon onClick={() => {
-            props.history.replace("/about?back")
-          }}/>
-        </Grid>
-        <Grid container item xs={10} alignItems="center" justify="space-evenly" direction="column">
+      <Grid container direction="row" justify="space-between" alignItems="center" style={{minHeight: "100%"}}>
+        <Hidden xsDown>
+          <Grid item md={0.5} sm={1}>
+            <AnimatedLeftIcon onClick={() => {
+              props.history.replace("/about?back")
+            }}/>
+          </Grid>
+        </Hidden>
+        <Grid container item lg={10} sm={9} xs={12} alignItems="center" justify="space-evenly" direction="column">
           <Grid item>
             <Typography variant="h3" gutterBottom className={classes.pageName}>
               My Experience!
             </Typography>
           </Grid>
-          <Grid item>
+          <Grid item className={classes.expansionContent}>
             {data.experience.map((exp, i) => (
               <ExpansionPanel expanded={expanded === `panel${i}`} className={classes.expansionPanel}
                               onChange={handleChange(`panel${i}`)}>
                 <ExpansionPanelSummary
-                  expandIcon={<ExpandMoreIcon style={{color:"#e6f1ff"}}/>}
+                  expandIcon={<ExpandMoreIcon style={{color: "#e6f1ff"}}/>}
                   aria-controls="panel1bh-content"
                   id="panel1bh-header"
                   className={classes.expansionPanelSummary}
                 >
-                  <Typography className={classes.heading}>{i+1}. {exp.name}</Typography>
+                  <Typography className={classes.heading}>{i + 1}. {exp.name}</Typography>
                   <Typography className={classes.secondaryHeading}>{exp.position}</Typography>
+                  <Hidden xsDown>
                   <Typography className={classes.secondaryHeading}>{exp.time}</Typography>
+                  </Hidden>
                 </ExpansionPanelSummary>
                 <ExpansionPanelDetails className={classes.expansionDetail}>
+                  <Hidden only={['sm','md', 'lg', 'xl']}>
+                    <Typography className={classes.secondaryHeading}>{exp.time}</Typography>
+                  </Hidden>
                   {exp.description.split("\n").map(para => (
                     <Typography paragraph className={classes.experienceDescription}>
                       {para}
@@ -133,9 +154,13 @@ function Experience(props) {
 
           </Grid>
         </Grid>
-        <Grid item xs={0.5}> <AnimatedRightIcon onClick={() => {
-          props.history.push("/work")
-        }}/></Grid>
+        <Hidden xsDown>
+          <Grid item md={0.5} sm={1}>
+            <AnimatedRightIcon onClick={() => {
+              props.history.push("/work")
+            }}/>
+          </Grid>
+        </Hidden>
       </Grid>
     </div>
   )
