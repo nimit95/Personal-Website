@@ -21,12 +21,11 @@ const useStyle = makeStyles(theme => ({
     padding: "0",
     margin: "0",
     display: "flex",
-    height: "100%"
   },
   content: {
     flexGrow: 1,
     backgroundColor: theme.palette.behindBackground,
-    height: "100%"
+
   },
   toolbar: {
     ...theme.mixins.toolbar,

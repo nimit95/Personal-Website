@@ -5,26 +5,52 @@ import data from "./config/config";
 import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
 import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
 import Hidden from "@material-ui/core/Hidden";
+import Link from "@material-ui/core/Link";
 
 
 const useStyle = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background,
     flexGrow: 1,
-    height: "100%"
+    minHeight: "100vh",
+    // paddingTop: "96px"
+  },
+  imageDiv: {
+    display: "flex",
+    justifyContent: "center",
+
+    [theme.breakpoints.down('sm')]: {
+      paddingTop: "96px",
+      marginBottom: theme.spacing(5)
+    },
+    "& img": {
+      transition: "transform .1s", /* Animation */
+      "&:hover":{
+        transform: "scale(1.1)"
+      }
+    }
+
   },
   aboutTxt: {
     color: theme.palette.primary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
-    fontSize: "18px",
+    fontSize: theme.typography.pxToRem(16),
+    [theme.breakpoints.down('sm')]: {
+      fontSize: theme.typography.pxToRem(16),
+      padding: theme.spacing(5)
+    },
     textAlign: "justify"
   },
   centerCropped: {
-    objectFit: "none",/* Do not scale the image */
+    objectFit: "scale-down",/* Do not scale the image */
     objectPosition: "center", /* Center the image within the element */
-    height: "250px",
-    width: "250px",
+    height: theme.typography.pxToRem(250),
+    width: theme.typography.pxToRem(250),
+    [theme.breakpoints.down('xs')]: {
+      fontSize: theme.typography.pxToRem(50),
+      lineHeight: theme.typography.pxToRem(50),
+    },
 
     display: "block"
   },
@@ -33,7 +59,11 @@ const useStyle = makeStyles(theme => ({
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
-    fontSize: "30px",
+    fontSize: theme.typography.pxToRem(30),
+    [theme.breakpoints.down('sm')]: {
+      textAlign: "center"
+    },
+
   }
 }));
 
@@ -41,39 +71,47 @@ function About(props) {
   const classes = useStyle();
   return (
     <div className={classes.root}>
-      <Grid container direction="row" justify="space-between" alignItems="center" style={{height:"100%"}}>
-        <Hidden mdDown>
-        <Grid item xs={0.5}>
+      <Grid container direction="row" justify="space-between" alignItems="center" style={{minHeight: "100vh"}}>
+        <Hidden smDown>
+          <Grid item lg={0.5}>
 
-          <AnimatedLeftIcon onClick={() => {
-            props.history.replace("/?back")
-          }}/>
-        </Grid>
-      </Hidden>
+            <AnimatedLeftIcon onClick={() => {
+              props.history.replace("/?back")
+            }}/>
+          </Grid>
+        </Hidden>
 
-        <Grid container item xs={10} alignItems="center" justify="space-evenly" direction="row">
-          <Grid item>
-            <div>
+        <Grid container item md={9} lg={10} alignItems="center" direction="row">
+          <Grid item xs={12} md={5}>
+            <div className={classes.imageDiv}>
               <img className={classes.centerCropped}
                    src={data.aboutPictureURL}
-                   alt="recipe thumbnail"/>
+                   alt="thumbnail"/>
             </div>
           </Grid>
-          <Grid item xs={6}>
+          <Grid item xs={12} md={7}>
             <Typography variant="h3" gutterBottom className={classes.heading}>
               About Me!
             </Typography>
-            {data.aboutText.split("\n").map(paraTxt => {
-              return <Typography paragraph className={classes.aboutTxt}>
-                {paraTxt}
-              </Typography>
-            })}
+            <Typography paragraph className={classes.aboutTxt}>
+              {data.aboutText.split("\n").map(paraTxt => {
+                return <>{paraTxt}<br/></>
+              })}
+            </Typography>
+
+            <Hidden only={['sm','md', 'lg', 'xl']}>
+              <Grid item xs={6} className={classes.knowMoreLink}>
+                <Link color="primary" href="/experience">
+                  Know More!
+                </Link>
+              </Grid>
+            </Hidden>
           </Grid>
         </Grid>
-        <Hidden mdDown>
-        <Grid item xs={0.5}> <AnimatedRightIcon onClick={() => {
-          props.history.push("/experience")
-        }}/></Grid></Hidden>
+        <Hidden smDown>
+          <Grid item lg={0.5}> <AnimatedRightIcon onClick={() => {
+            props.history.push("/experience")
+          }}/></Grid></Hidden>
       </Grid>
     </div>
   )

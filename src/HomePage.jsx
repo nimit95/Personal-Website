@@ -18,7 +18,7 @@ const useStyle = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background,
     flexGrow: 1,
-    height: "100%"
+    minHeight:"100vh",
   },
   typography: {
     align: "center"
@@ -30,7 +30,7 @@ const useStyle = makeStyles(theme => ({
     fontWeight: "300",
     fontSize: theme.typography.pxToRem(36),
     lineHeight: theme.typography.pxToRem(24),
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('xs')]: {
       fontSize: theme.typography.pxToRem(24),
       lineHeight: theme.typography.pxToRem(16),
     },
@@ -44,7 +44,7 @@ const useStyle = makeStyles(theme => ({
     fontWeight: "300",
     fontSize: theme.typography.pxToRem(48),
     textAlign: "center",
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('xs')]: {
       fontSize: theme.typography.pxToRem(32),
     },
     // lineHeight: "24px"
@@ -56,7 +56,7 @@ const useStyle = makeStyles(theme => ({
     fontStyle: "normal",
     fontWeight: "300",
     fontSize: theme.typography.pxToRem(30),
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('xs')]: {
       fontSize: theme.typography.pxToRem(20),
     },
     textAlign: "center"
@@ -69,7 +69,7 @@ const useStyle = makeStyles(theme => ({
     fontWeight: "300",
     marginTop: theme.spacing(10),
     fontSize: theme.typography.pxToRem(48),
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('xs')]: {
       fontSize: theme.typography.pxToRem(32),
     },
   },
@@ -79,7 +79,7 @@ const useStyle = makeStyles(theme => ({
     fontStyle: "normal",
     fontWeight: "300",
     fontSize: theme.typography.pxToRem(30),
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('xs')]: {
       fontSize: theme.typography.pxToRem(20),
     },
   },
@@ -97,8 +97,9 @@ const useStyle = makeStyles(theme => ({
     fontWeight: 300,
     textAlign: "center",
     fontSize: theme.typography.pxToRem(15),
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down('xs')]: {
       fontSize: theme.typography.pxToRem(15),
+      padding: theme.spacing(1),
     },
     color: theme.palette.secondary.main,
   },
@@ -123,18 +124,19 @@ function HomePage(props) {
   console.log("rerendering")
   return (
     // <div className={classes.root}>
-    <div className={`${classes.root}`}>
-      <Grid container direction="row" justify="space-between" alignItems="center" style={{height: "100%"}}>
-        <Hidden smDown>
-          <Grid item xs={0.5}>
+    <div className={classes.root}>
+      <Grid container direction="row" justify="space-between" alignItems="center" style={{minHeight: "100vh"}}>
+        <Hidden xsDown>
+          <Grid item md={0.5} sm={1}>
             <AnimatedLeftIcon disabled/>
           </Grid>
         </Hidden>
         <Grid
           container
           item
-          md={10}
-          sm={12}
+          lg={10}
+          sm={9}
+          xs={12}
           spacing={0}
           direction="column"
           alignItems="center"
@@ -151,7 +153,7 @@ function HomePage(props) {
             </Typography>
           </Grid>
 
-          <Grid item xs={6}>
+          <Grid item xs={6} xs={8}>
             <Typography variant="h3" gutterBottom className={classes.description}>
               {data.description}
             </Typography>
@@ -169,7 +171,7 @@ function HomePage(props) {
             </Typography>
           </Grid>
 
-          <Hidden only="sm">
+          <Hidden only={['sm','md', 'lg', 'xl']}>
             <Grid item xs={6} className={classes.knowMoreLink}>
               <Link color="primary" href="/about">
                 Know More!
@@ -178,7 +180,7 @@ function HomePage(props) {
           </Hidden>
 
 
-          <Grid item xs={6}>
+          <Grid item sm={6} xs={8}>
             <Button variant="outlined" className={classes.getInTouchButton} component="a"
                     href={`mailto:${data.email}?Subject=Hello`} target="_top">
               Get in Touch!
@@ -186,7 +188,7 @@ function HomePage(props) {
           </Grid>
         </Grid>
         <Grid item>
-          <Hidden smDown>
+          <Hidden xsDown>
             <AnimatedRightIcon onClick={() => {
               history.push("/about")
             }}/>
