@@ -8,9 +8,9 @@ import Footer from "./Footer";
 
 
 /**
- * TODO: resume, experience content fix,  write readme,like button, Add 404 page, , tech display in about, , grammarly on config json, cleanup, gs, know moew button, footer
+ * TODO:,  write readme, tech display in about, errors fix, ga,
  *
- * TODO long term - contact page with form, github button in card
+ * TODO long term - contact page with form, github button in card, Add 404 page, like button
  * @type {StylesHook<Styles<Theme, {}, string>>}
  */
 const useStyle = makeStyles(theme => ({

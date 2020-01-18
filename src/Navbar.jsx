@@ -7,6 +7,7 @@ import {NavLink} from "react-router-dom";
 import {Hidden} from "@material-ui/core";
 import Button from '@material-ui/core/Button';
 import Menu from '@material-ui/core/Menu';
+import data from './config/config'
 import {Link} from 'react-router-dom';
 import MenuItem from '@material-ui/core/MenuItem';
 
@@ -120,7 +121,7 @@ function Navbar(props) {
                   {/*<NavLink to="/contact" activeStyle={activeStyle}>*/}
                   {/*  05. Contact*/}
                   {/*</NavLink>*/}
-                  <Button variant="outlined" className={classes.navButton}>
+                  <Button variant="outlined" className={classes.navButton} href={data.resumeUrl} target="_blank">
                     Resume
                   </Button>
                 </Hidden>
