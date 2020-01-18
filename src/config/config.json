@@ -36,12 +36,13 @@
     "Swimming",
     "Food"
   ],
-  "aboutText": "Hello! I am working with BrowserStack as a Senior Software Engineer. I completed B.Tech in Computer Science and Engineering in 2018.\n\nStrong data structures, algorithms and problem-solving skills, fast learner, technology enthusiast, impact-oriented.\nI recently got a Mobile Web specialist certification from Google and has also completed Udacity's Mobile Web specialist Nanodegree.\n\nI have been an SDE intern and TA in Algo at Coding Blocks. I have also completed Udacity's Android Developer, Nanodegree by Google. I've completed Machine Learning and Algorithm Analysis and Design on Coursera.\n\nI am driven by challenging, fast-paced, exciting, and educational environments. My areas of interest include web and mobile application development.\nHere are a few technologies I've been working with recently:",
+  "aboutText": "Hello! I am working with BrowserStack as a Senior Software Engineer. I completed B.Tech in Computer Science and Engineering in 2018.\n\nStrong data structures, algorithms and problem-solving skills, fast learner, technology enthusiast, impact-oriented.\nI recently got a Mobile Web specialist certification from Google and has also completed Udacity's Mobile Web specialist Nanodegree.\n\nI have been an SDE intern and TA in Algo at Coding Blocks. I have also completed Udacity's Android Developer, Nanodegree by Google. I've completed Machine Learning and Algorithm Analysis and Design on Coursera.\n\nI am driven by challenging, fast-paced, exciting, and educational environments. My areas of interest include web and mobile application development.\n",
   "aboutTechnologies": [
     "JavaScript (ES6+)",
     "Node.js",
     "React",
     "Express",
+    "RoR",
     "C/C++",
     "MySQL"
   ],

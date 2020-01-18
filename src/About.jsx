@@ -1,11 +1,14 @@
 import React from "react"
-import { makeStyles, Grid } from "@material-ui/core";
+import {makeStyles, Grid} from "@material-ui/core";
 import Typography from "@material-ui/core/Typography";
 import data from "./config/config";
 import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
 import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
 import Hidden from "@material-ui/core/Hidden";
 import Link from "@material-ui/core/Link";
+import List from "@material-ui/core/Link";
+import ListItem from "@material-ui/core/Link";
+import ListItemText from "@material-ui/core/Link";
 
 
 const useStyle = makeStyles(theme => ({
@@ -25,7 +28,7 @@ const useStyle = makeStyles(theme => ({
     },
     "& img": {
       transition: "transform .1s", /* Animation */
-      "&:hover":{
+      "&:hover": {
         transform: "scale(1.1)"
       }
     }
@@ -106,13 +109,15 @@ function About(props) {
               {data.aboutText.split("\n").map(paraTxt => {
                 return <>{paraTxt}<br/></>
               })}
+              Here are a few technologies I've been working with recently:<br/>
+              {data.aboutTechnologies.map(tech => {return <><b>{tech}, </b></>})}
             </Typography>
 
 
           </Grid>
-          <Hidden only={['sm','md', 'lg', 'xl']}>
-            <Grid item xs={12} md={7} style={{display:"flex", justifyContent: "center", padding:"10px"}}>
-              <Link color="primary" href="/experience"  className={classes.knowMoreLink}>
+          <Hidden only={['sm', 'md', 'lg', 'xl']}>
+            <Grid item xs={12} md={7} style={{display: "flex", justifyContent: "center", padding: "10px"}}>
+              <Link color="primary" href="/experience" className={classes.knowMoreLink}>
                 Know More!
               </Link>
             </Grid>
