@@ -9,8 +9,10 @@ import ReactGA from 'react-ga';
 
 
 function App() {
-  if(data.ga)
+  if(data.ga) {
     ReactGA.initialize(data.ga);
+    ReactGA.pageview(window.location.pathname + window.location.search);
+  }
 
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
