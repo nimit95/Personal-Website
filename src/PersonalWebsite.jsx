@@ -2,8 +2,9 @@ import React from "react";
 import Navbar from "./Navbar";
 import SideDrawer from "./SideDrawer"
 import Router from './Router'
-import {makeStyles, CssBaseline} from "@material-ui/core";
+import {makeStyles, CssBaseline, List} from "@material-ui/core";
 import Hidden from "@material-ui/core/Hidden";
+import Footer from "./Footer";
 
 
 /**
@@ -17,6 +18,7 @@ const useStyle = makeStyles(theme => ({
     padding: "0",
     margin: "0",
     display: "flex",
+    flexDirection: 'column',
   },
   content: {
     flexGrow: 1,
@@ -45,6 +47,9 @@ function PersonalWebsite() {
         {/*<div className={classes.toolbar}/>*/}
         <Router className={classes.root}/>
       </div>
+      <Hidden only={['sm', 'md', 'lg', 'xl']}>
+        <Footer/>
+      </Hidden>
     </div>
 
 

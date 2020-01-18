@@ -38,7 +38,7 @@ const useStyle = makeStyles(theme => ({
     justifyContent: 'flex-start',
     overflow: 'hidden',
     [theme.breakpoints.down('xs')]: {
-     padding: "20px"
+     padding: "20px 30px"
     },
   },
   card: {
