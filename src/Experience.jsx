@@ -10,7 +10,8 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Hidden from "@material-ui/core/Hidden";
-import Link from "@material-ui/core/Link";
+import {Link} from 'react-router-dom';
+import Button from "@material-ui/core/Button";
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -166,9 +167,9 @@ function Experience(props) {
           </Grid>
           <Hidden only={['sm','md', 'lg', 'xl']}>
             <Grid item xs={12} md={7} style={{display:"flex", justifyContent: "center", padding:"10px"}}>
-              <Link color="primary" href="/work"  className={classes.knowMoreLink}>
+              <Button component={ Link } color="primary" to="/work"  className={classes.knowMoreLink}>
                 Know More!
-              </Link>
+              </Button>
             </Grid>
           </Hidden>
         </Grid>

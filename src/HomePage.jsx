@@ -8,7 +8,7 @@ import AnimatedFavoriteIcon from './Animations/AnimatedFavoriteIcon'
 import {useHistory} from "react-router-dom";
 import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
 import Button from "@material-ui/core/Button";
-import Link from "@material-ui/core/Link";
+import {Link} from 'react-router-dom';
 import Hidden from '@material-ui/core/Hidden';
 
 
@@ -171,9 +171,9 @@ function HomePage() {
 
           <Hidden only={['sm', 'md', 'lg', 'xl']}>
             <Grid item xs={6} className={classes.knowMoreLink}>
-              <Link color="primary" href="/about">
+              <Button component={ Link } color="primary" to="/about">
                 Know More!
-              </Link>
+              </Button>
             </Grid>
           </Hidden>
 

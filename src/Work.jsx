@@ -10,7 +10,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Hidden from "@material-ui/core/Hidden";
-import Link from "@material-ui/core/Link";
+import {Link} from 'react-router-dom';
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -168,9 +168,9 @@ function Work(props) {
           </Grid>
           <Hidden only={['sm', 'md', 'lg', 'xl']}>
             <Grid item xs={12} md={7} style={{display: "flex", justifyContent: "center", padding: "10px"}}>
-              <Link color="primary" href="/journey" className={classes.knowMoreLink}>
+              <Button component={ Link } color="primary" to="/journey" className={classes.knowMoreLink}>
                 Know More!
-              </Link>
+              </Button>
             </Grid>
           </Hidden>
         </Grid>
