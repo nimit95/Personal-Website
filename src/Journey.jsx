@@ -25,7 +25,7 @@ const useStyle = makeStyles(theme => ({
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
-    fontSize: "30px",
+    fontSize: theme.typography.pxToRem(30),
     marginTop: "40px"
   },
   button: {
@@ -83,7 +83,7 @@ const useStyle = makeStyles(theme => ({
   journeyDescription: {
     color: theme.palette.primary.main,
     textAlign: "justify",
-    fontSize: 14,
+    fontSize: theme.typography.pxToRem(14),
     fontStyle: "thin",
     fontWeight: "300",
   },
