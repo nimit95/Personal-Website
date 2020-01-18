@@ -10,6 +10,7 @@ import ExpansionPanelSummary from '@material-ui/core/ExpansionPanelSummary';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Hidden from "@material-ui/core/Hidden";
+import Link from "@material-ui/core/Link";
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -93,6 +94,16 @@ const useStyle = makeStyles(theme => ({
     [theme.breakpoints.down('xs')]: {
       padding: "15px",
     },
+  },
+  knowMoreLink: {
+    fontSize: theme.typography.pxToRem(18),
+    border: "1px solid #e6f1ff",
+    textAlign: "center",
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: 300,
+    textDecoration: 'none',
+    padding: "10px"
   }
 }));
 
@@ -153,6 +164,13 @@ function Experience(props) {
             ))}
 
           </Grid>
+          <Hidden only={['sm','md', 'lg', 'xl']}>
+            <Grid item xs={12} md={7} style={{display:"flex", justifyContent: "center", padding:"10px"}}>
+              <Link color="primary" href="/work"  className={classes.knowMoreLink}>
+                Know More!
+              </Link>
+            </Grid>
+          </Hidden>
         </Grid>
         <Hidden xsDown>
           <Grid item md={0.5} sm={1}>

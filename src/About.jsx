@@ -63,7 +63,16 @@ const useStyle = makeStyles(theme => ({
     [theme.breakpoints.down('sm')]: {
       textAlign: "center"
     },
-
+  },
+  knowMoreLink: {
+    fontSize: theme.typography.pxToRem(18),
+    border: "1px solid #e6f1ff",
+    textAlign: "center",
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: 300,
+    textDecoration: 'none',
+    padding: "10px"
   }
 }));
 
@@ -99,14 +108,15 @@ function About(props) {
               })}
             </Typography>
 
-            <Hidden only={['sm','md', 'lg', 'xl']}>
-              <Grid item xs={6} className={classes.knowMoreLink}>
-                <Link color="primary" href="/experience">
-                  Know More!
-                </Link>
-              </Grid>
-            </Hidden>
+
           </Grid>
+          <Hidden only={['sm','md', 'lg', 'xl']}>
+            <Grid item xs={12} md={7} style={{display:"flex", justifyContent: "center", padding:"10px"}}>
+              <Link color="primary" href="/experience"  className={classes.knowMoreLink}>
+                Know More!
+              </Link>
+            </Grid>
+          </Hidden>
         </Grid>
         <Hidden smDown>
           <Grid item lg={0.5}> <AnimatedRightIcon onClick={() => {

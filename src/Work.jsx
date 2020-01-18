@@ -10,6 +10,7 @@ import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 import Hidden from "@material-ui/core/Hidden";
+import Link from "@material-ui/core/Link";
 
 const useStyle = makeStyles(theme => ({
   root: {
@@ -38,7 +39,7 @@ const useStyle = makeStyles(theme => ({
     justifyContent: 'flex-start',
     overflow: 'hidden',
     [theme.breakpoints.down('xs')]: {
-     padding: "20px 30px"
+      padding: "20px 30px"
     },
   },
   card: {
@@ -68,20 +69,32 @@ const useStyle = makeStyles(theme => ({
   pos: {
     marginBottom: 12,
   },
-
   blogHeading: {
     color: theme.palette.secondary.main,
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
     fontSize: theme.typography.pxToRem(25),
-  }
+  },
+  knowMoreLink: {
+    fontSize: theme.typography.pxToRem(18),
+    border: "1px solid #e6f1ff",
+    textAlign: "center",
+    fontFamily: "Roboto",
+    fontStyle: "normal",
+    fontWeight: 300,
+    marginTop: theme.spacing(10),
+    padding: theme.spacing(1, 1.5),
+    textDecoration: 'none',
+  },
+
 }));
 
 
 function Work(props) {
 
   const classes = useStyle();
+
   function getBlogWork() {
     return (
       <>
@@ -153,6 +166,13 @@ function Work(props) {
             </Grid>
             {data.blogData && data.blogData.length > 0 && getBlogWork()}
           </Grid>
+          <Hidden only={['sm', 'md', 'lg', 'xl']}>
+            <Grid item xs={12} md={7} style={{display: "flex", justifyContent: "center", padding: "10px"}}>
+              <Link color="primary" href="/journey" className={classes.knowMoreLink}>
+                Know More!
+              </Link>
+            </Grid>
+          </Hidden>
         </Grid>
         <Hidden xsDown>
           <Grid item xs={0.5}> <AnimatedRightIcon onClick={() => {

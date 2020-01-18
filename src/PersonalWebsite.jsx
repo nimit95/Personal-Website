@@ -51,10 +51,7 @@ function PersonalWebsite() {
         <Footer/>
       </Hidden>
     </div>
-
-
-  )
-    ;
+  );
 }
 
 
