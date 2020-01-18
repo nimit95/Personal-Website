@@ -11,12 +11,14 @@ import Button from '@material-ui/core/Button';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import data from './config/config';
+import Hidden from "@material-ui/core/Hidden";
 
 const useStyle = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background,
     flexGrow: 1,
-    height: "100%"
+    minHeight: "100vh",
+    paddingTop: theme.spacing(5)
   },
   pageName: {
     color: theme.palette.secondary.main,
@@ -62,16 +64,16 @@ const useStyle = makeStyles(theme => ({
   },
   stepperLabel: {
     "& .MuiStepLabel-active": {
-      color:  theme.palette.primary.main,
+      color: theme.palette.primary.main,
     },
     "& .MuiStepLabel-completed": {
-      color:  theme.palette.primary.main,
+      color: theme.palette.primary.main,
     },
     "&.Mui-disabled .MuiStepLabel-label": {
-      color:  theme.palette.primary.main,
+      color: theme.palette.primary.main,
     },
     "&.MuiStepIcon-root": {
-      color:  theme.palette.primary.main,
+      color: theme.palette.primary.main,
     },
     color: theme.palette.primary.main,
     fontFamily: "Roboto",
@@ -120,12 +122,14 @@ function Journey(props) {
   return (
     <div className={classes.root}>
       <Grid container direction="row" justify="space-between" alignItems="center" style={{height: "100%"}}>
-        <Grid item xs={1}>
-          <AnimatedLeftIcon onClick={() => {
-            props.history.replace("/work?back")
-          }}/>
-        </Grid>
-        <Grid container item xs={10} alignItems="center" justify="space-evenly" direction="column">
+        <Hidden xsDown>
+          <Grid item xs={1}>
+            <AnimatedLeftIcon onClick={() => {
+              props.history.replace("/work?back")
+            }}/>
+          </Grid>
+        </Hidden>
+        <Grid container item lg={10} sm={8} xs={12} alignItems="center" justify="space-evenly" direction="column">
           <Grid item>
             <Typography variant="h3" gutterBottom className={classes.pageName}>
               My Journey!
@@ -172,9 +176,9 @@ function Journey(props) {
             )}
           </Grid>
         </Grid>
-        {/*<Grid item xs={1}> <AnimatedRightIcon onClick={() => {*/}
-        {/*  props.history.push("/contact")*/}
-        {/*}}/></Grid>*/}
+        <Hidden xsDown>
+          <Grid item xs={1}> <AnimatedRightIcon disabled/></Grid>
+        </Hidden>
       </Grid>
     </div>
   )
