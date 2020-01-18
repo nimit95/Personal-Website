@@ -2,21 +2,13 @@ import React from "react";
 import {Grid, makeStyles} from "@material-ui/core";
 import AnimatedLeftIcon from "./Animations/AnimatedLeftIcon";
 import Typography from "@material-ui/core/Typography";
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import GridListTileBar from '@material-ui/core/GridListTileBar';
-import ListSubheader from '@material-ui/core/ListSubheader';
-import IconButton from '@material-ui/core/IconButton';
-import InfoIcon from '@material-ui/icons/Info';
 import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
 import data from './config/config'
-import ListItem from "@material-ui/core/ListItem";
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
-import Feed from "rss-to-json"
 import Hidden from "@material-ui/core/Hidden";
 
 const useStyle = makeStyles(theme => ({
@@ -31,7 +23,7 @@ const useStyle = makeStyles(theme => ({
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
-    fontSize: "30px",
+    fontSize: theme.typography.pxToRem(30),
     [theme.breakpoints.down('sm')]: {
       paddingTop: "10px",
     },
@@ -69,7 +61,7 @@ const useStyle = makeStyles(theme => ({
   projectDescription: {
     color: theme.palette.primary.main,
     textAlign: "justify",
-    fontSize: 14,
+    fontSize: theme.typography.pxToRem(14),
     fontStyle: "thin",
     fontWeight: "300",
   },
@@ -82,7 +74,7 @@ const useStyle = makeStyles(theme => ({
     fontFamily: "Roboto",
     fontStyle: "normal",
     fontWeight: "300",
-    fontSize: "25px",
+    fontSize: theme.typography.pxToRem(25),
   }
 }));
 
