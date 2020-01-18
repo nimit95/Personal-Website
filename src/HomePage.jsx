@@ -1,6 +1,6 @@
 import React from "react";
 import Typography from "@material-ui/core/Typography";
-import {makeStyles, Grid, Icon, Container} from "@material-ui/core";
+import {makeStyles, Grid} from "@material-ui/core";
 import data from './config/config.json'
 import AnimateText from "./Animations/AnimateText";
 import AnimatedRightIcon from "./Animations/AnimatedRightIcon";
@@ -16,7 +16,7 @@ const useStyle = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background,
     flexGrow: 1,
-    minHeight:"100vh",
+    minHeight: "100vh",
   },
   typography: {
     align: "center"
@@ -114,7 +114,7 @@ const useStyle = makeStyles(theme => ({
   }
 }));
 
-function HomePage(props) {
+function HomePage() {
   const classes = useStyle();
   const history = useHistory();
 
@@ -151,7 +151,7 @@ function HomePage(props) {
             </Typography>
           </Grid>
 
-          <Grid item xs={6} xs={8}>
+          <Grid item md={6} xs={8}>
             <Typography variant="h3" gutterBottom className={classes.description}>
               {data.description}
             </Typography>
@@ -169,7 +169,7 @@ function HomePage(props) {
             </Typography>
           </Grid>
 
-          <Hidden only={['sm','md', 'lg', 'xl']}>
+          <Hidden only={['sm', 'md', 'lg', 'xl']}>
             <Grid item xs={6} className={classes.knowMoreLink}>
               <Link color="primary" href="/about">
                 Know More!

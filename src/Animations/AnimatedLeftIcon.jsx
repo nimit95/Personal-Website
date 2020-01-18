@@ -1,6 +1,6 @@
 import React from "react";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
-import {useTransition, animated, config, useSpring} from 'react-spring'
+import {animated, useSpring} from 'react-spring'
 
 const handleAnim = async next => {
   let i = 0;
@@ -24,15 +24,16 @@ function AnimatedLeftIcon({onClick, disabled}) {
     reset: true,
   });
 
-  const [props2, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }))
+  const [props2, set] = useSpring(() => ({xys: [0, 0, 1], config: {mass: 5, tension: 350, friction: 40}}))
 // ...
 
   const Icon = animated(ChevronLeftIcon);
   return (
-    disabled ? <ChevronLeftIcon style={{ height: '100px', width: '100px', display:"none"}}/>:
-    <Icon style={{...props,...props2, transform: props2.xys.interpolate(trans), cursor: "pointer"}} onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y) })}
-          onMouseLeave={() => set({ xys: [0, 0, 1] })} onClick={onClick}
-    />
+    disabled ? <ChevronLeftIcon style={{height: '100px', width: '100px', display: "none"}}/> :
+      <Icon style={{...props, ...props2, transform: props2.xys.interpolate(trans), cursor: "pointer"}}
+            onMouseMove={({clientX: x, clientY: y}) => set({xys: calc(x, y)})}
+            onMouseLeave={() => set({xys: [0, 0, 1]})} onClick={onClick}
+      />
   )
 }
 

@@ -1,5 +1,5 @@
 import React from 'react'
-import {AppBar, Toolbar, Typography, Paper} from "@material-ui/core/";
+import {AppBar, Toolbar} from "@material-ui/core/";
 import {makeStyles} from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
@@ -48,9 +48,7 @@ const useStyles = makeStyles(theme => ({
     // textAlign: 'left',
     // padding: theme.spacing.unit * 2
   },
-  activeStyle: {
-
-  }
+  activeStyle: {}
 }));
 
 function Navbar(props) {
@@ -62,32 +60,32 @@ function Navbar(props) {
   return (
 
     <AppBar position="fixed" className={classes.appBar}>
-      <Toolbar >
+      <Toolbar>
         {/*<Typography variant="h5">OKR Todo</Typography>*/}
         <div className={classes.toolbarDiv}>
           <Grid container direction="row" justify="flex-end" alignItems="center">
-            <Grid item >
+            <Grid item>
               <Hidden xsDown>
-              <nav className={classes.toolbarTitle}>
-                <NavLink exact to="/about" activeStyle={activeStyle}>
-                  01. About
-                </NavLink>
-                <NavLink to="/experience" activeStyle={activeStyle}>
-                  02. Experience
-                </NavLink>
-                <NavLink to="/work"activeStyle={activeStyle}>
-                  03. Work
-                </NavLink>
-                <NavLink to="/journey" activeStyle={activeStyle}>
-                  04. Journey
-                </NavLink>
-                {/*<NavLink to="/contact" activeStyle={activeStyle}>*/}
-                {/*  05. Contact*/}
-                {/*</NavLink>*/}
-                <Button variant="outlined" className={classes.navButton}>
-                  Resume
-                </Button>
-              </nav>
+                <nav className={classes.toolbarTitle}>
+                  <NavLink exact to="/about" activeStyle={activeStyle}>
+                    01. About
+                  </NavLink>
+                  <NavLink to="/experience" activeStyle={activeStyle}>
+                    02. Experience
+                  </NavLink>
+                  <NavLink to="/work" activeStyle={activeStyle}>
+                    03. Work
+                  </NavLink>
+                  <NavLink to="/journey" activeStyle={activeStyle}>
+                    04. Journey
+                  </NavLink>
+                  {/*<NavLink to="/contact" activeStyle={activeStyle}>*/}
+                  {/*  05. Contact*/}
+                  {/*</NavLink>*/}
+                  <Button variant="outlined" className={classes.navButton}>
+                    Resume
+                  </Button>
+                </nav>
               </Hidden>
             </Grid>
           </Grid>

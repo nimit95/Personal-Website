@@ -1,6 +1,6 @@
 import React from "react";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import {useTransition, animated, config, useSpring} from 'react-spring'
+import {animated, useSpring} from 'react-spring'
 
 const handleAnim = async next => {
   let i = 0;

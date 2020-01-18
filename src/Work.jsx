@@ -82,8 +82,6 @@ const useStyle = makeStyles(theme => ({
 function Work(props) {
 
   const classes = useStyle();
-  const bull = <span className={classes.bullet}>•</span>;
-
   function getBlogWork() {
     return (
       <>

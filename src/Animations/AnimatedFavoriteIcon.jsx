@@ -1,6 +1,6 @@
 import React from "react";
 import Favorite from "@material-ui/icons/Favorite"
-import {useTransition, animated, config, useSpring} from 'react-spring'
+import {animated, useSpring} from 'react-spring'
 
 const handleAnim = async next => {
   let i = 0;
@@ -10,6 +10,7 @@ const handleAnim = async next => {
     i++;
   }
 };
+
 function AnimatedFavoriteIcon({onClick}) {
 
   const props = useSpring({
