@@ -19,7 +19,7 @@
 All the data is controlled by the config.json in folder src/config/
 <hr/>
 
-<img src="https://github.com/nimit95/Personal-Website/blob/master/demo/nimitaggrwal.png?raw=true" width="48">
+<img src="https://github.com/nimit95/Personal-Website/blob/master/demo/nimitaggrwal.png?raw=true" width="200">
 
 ![demo](https://github.com/nimit95/Personal-Website/blob/master/demo/nimitAggarwal.gif?raw=true)
 ![demo](https://github.com/nimit95/Personal-Website/blob/master/demo/nimitaggarwalmobile.gif?raw=true)
