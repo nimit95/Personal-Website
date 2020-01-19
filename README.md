@@ -20,8 +20,8 @@ The website is highly configurable and can easily be modified from the JSON file
 
 # Demo
 <p align="middle">
-  <img src="https://github.com/nimit95/Personal-Website/blob/master/demo/nimitaggrwal.png?raw=true" width="500" alt="demo picture" />	  
-  <img src="https://github.com/nimit95/Personal-Website/blob/master/demo/nimitAggarwal.gif?raw=true" width="500" alt="demo desktop gif" />  <br/>
+  <img src="https://github.com/nimit95/Personal-Website/blob/master/demo/nimitaggrwal.png?raw=true" width="450" alt="demo picture" />	  
+  <img src="https://github.com/nimit95/Personal-Website/blob/master/demo/nimitAggarwal.gif?raw=true" width="450" alt="demo desktop gif" />  <br/>
   <img src="https://github.com/nimit95/Personal-Website/blob/master/demo/nimitaggarwalmobile.gif?raw=true" width="300" height="500" alt="demo mobile gif"/>  
 </p>
 
