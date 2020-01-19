@@ -6,7 +6,7 @@
   This is my Personal Website <a href="https://nimitaggarwal.com" target="_blank">nimitaggarwal.com</a> built with <a href="https://www.reactjs.org/" target="_blank">React</a> and hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>
 </p>
 <p align="center">
-It uses <a href="https://material-ui.com/" target="_blank">Material UI</a> for the Design Style. Design was created using <a href="https://figma.com/" target="_blank">figma</a> and the design files are <a href="https://github.com/nimit95/Personal-Website/blob/master/nimitaggarwal.fig">here</a> and pdf file <a href="https://github.com/nimit95/Personal-Website/blob/master/nimitaggarwal.com.pdf">here</a>
+  It uses <a href="https://material-ui.com/" target="_blank">Material UI</a> for the Design Style. Design was created using <a href="https://figma.com/" target="_blank">figma</a> and the design files are <a href="https://github.com/nimit95/Personal-Website/blob/master/nimitaggarwal.fig">here</a> and pdf file <a href="https://github.com/nimit95/Personal-Website/blob/master/nimitaggarwal.com.pdf">here</a>
 </p>
 
 <p align="center">
