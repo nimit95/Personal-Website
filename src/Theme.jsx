@@ -7,10 +7,8 @@ const theme = createMuiTheme({
       main: blueGrey[50],
     },
     secondary: {
-      light: '#0066ff',
       main: "#66fcf1",
       // dark: will be calculated from palette.secondary.main,
-      contrastText: '#ffcc00',
     },
     background: blueGrey[900],
     secondaryBackground: blueGrey[800],

@@ -15,7 +15,7 @@
     <img src="https://api.netlify.com/api/v1/badges/cce3a254-ac43-41f7-bbe9-6421c90a2dd0/deploy-status" alt="Netlify Status" />  
   </a>  
 
-The website is highly configurable and can easily be modified from the JSON file <a href="https://github.com/nimit95/Personal-Website/blob/master/src/config/config.json" target="_blank">config.json</a> in src/config/config.json. All the data is controlled by the file and changes will be reflected on the fly.
+The website is highly configurable and can easily be modified from the JSON file <a href="https://github.com/nimit95/Personal-Website/blob/master/src/config/config.json" target="_blank">config.json</a> in src/config/config.json. All the data is controlled by the file and changes will be reflected on the fly. Colour scheme is configurable from the <a href="https://github.com/nimit95/Personal-Website/blob/master/src/Theme.jsx" target="_blank">Theme.jsx</a>
 </p>
 
 # Demo
