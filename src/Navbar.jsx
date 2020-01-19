@@ -70,12 +70,17 @@ const useStyles = makeStyles(theme => ({
     // color: theme.palette.secondary.main,
 
     // background: theme.palette.appBarBackground,
+
     "& *": {
       color: theme.palette.secondary.main,
       fontStyle: "bold",
       fontWeight: "bold"
       // opacity: 0.25,
     }
+  },
+  menuItem: {
+    backgroundColor: theme.palette.appBarBackground,
+    color: theme.palette.secondary.main,
   }
 }));
 
@@ -138,12 +143,12 @@ function Navbar(props) {
                     onClose={handleClose}
                     className={classes.menu}
                   >
-                    <MenuItem onClick={handleClose} component={Link} to="/">Home</MenuItem>
-                    <MenuItem onClick={handleClose} component={Link} to="/about">About</MenuItem>
-                    <MenuItem onClick={handleClose} component={Link} to="/experience">Experience</MenuItem>
-                    <MenuItem onClick={handleClose} component={Link} to="/work">Work</MenuItem>
-                    <MenuItem onClick={handleClose} component={Link} to="/journey">Journey</MenuItem>
-                    <MenuItem onClick={handleClose} component="a" href={data.resumeUrl}>Resume</MenuItem>
+                    <MenuItem onClick={handleClose} className={classes.menuItem} component={Link} to="/">Home</MenuItem>
+                    <MenuItem onClick={handleClose} className={classes.menuItem} component={Link} to="/about">About</MenuItem>
+                    <MenuItem onClick={handleClose} className={classes.menuItem} component={Link} to="/experience">Experience</MenuItem>
+                    <MenuItem onClick={handleClose} className={classes.menuItem} component={Link} to="/work">Work</MenuItem>
+                    <MenuItem onClick={handleClose} className={classes.menuItem} component={Link} to="/journey">Journey</MenuItem>
+                    <MenuItem onClick={handleClose} className={classes.menuItem} component="a" href={data.resumeUrl}>Resume</MenuItem>
                   </Menu>
                 </Hidden>
               </nav>
