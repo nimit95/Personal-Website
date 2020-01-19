@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ce828d42-9e66-44cf-afab-b613124c2325" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Theme.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Theme.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +97,7 @@
       <workItem from="1578766708845" duration="20825000" />
       <workItem from="1578842618095" duration="30753000" />
       <workItem from="1579022324183" duration="76095000" />
-      <workItem from="1579380046237" duration="2996000" />
+      <workItem from="1579380046237" duration="3373000" />
     </task>
     <servers />
   </component>
@@ -120,10 +118,10 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="422" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1578909014379">
+    <state x="422" y="260" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1579432930426">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="422" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1578909014379" />
+    <state x="422" y="260" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1440.900@0.0.1440.900" timestamp="1579432930426" />
     <state x="500" y="139" key="#com.intellij.openapi.keymap.impl.ui.EditKeymapsDialog" timestamp="1578936331927">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
@@ -168,10 +166,10 @@
       <screen x="0" y="23" width="1440" height="802" />
     </state>
     <state x="100" y="100" width="1240" height="700" key="dock-window-1/0.23.1440.802@0.23.1440.802" timestamp="1579239191869" />
-    <state x="386" y="210" width="816" height="550" key="find.popup" timestamp="1579377718768">
+    <state x="386" y="210" width="816" height="550" key="find.popup" timestamp="1579418615588">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state x="386" y="210" width="816" height="550" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1579377718768" />
+    <state x="386" y="210" width="816" height="550" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1579418615588" />
     <state width="600" height="424" key="javadoc.popup" timestamp="1578826537620">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
